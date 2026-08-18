@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Soaps | Natural Care • Pure Touch | Premium Natural Skincare</title>
+  <meta name="description" content="Aura Soaps offers handcrafted natural soaps and eco-friendly skincare made with skin-loving organic botanicals, shea butter, and essential oils.">
+  <meta name="keywords" content="natural soap, artisanal soap, organic skincare, eco friendly skincare, beauty soap, herbal soap, moisturizing soap, luxury cosmetics">
+  <meta name="author" content="Aura Soaps">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS Scroll Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper 11 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-aura" id="mainNavbar">
+      <div class="container-custom d-flex align-items-center justify-content-between">
+        
+        <!-- Logo -->
+        <a class="navbar-brand-aura" href="#hero" id="brandLogo">
+          <img src="assets/images/logo.png" alt="Aura Soaps - Natural Care • Pure Touch" class="brand-logo-img">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler navbar-toggler-aura d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-end align-items-center">
+          <ul class="navbar-nav me-4 gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-aura active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="categories.html">Categories</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="agent-locator.html">Find Agent</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="agent-portal.html">Agent Portal</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="contact.html">Contact</a></li>
+          </ul>
+          <a href="become-agent.html" class="btn-aura-primary">
+            <span>Become Agent</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end offcanvas-aura" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header border-bottom">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/logo.png" alt="Aura Soaps Logo" style="height: 42px; width: auto;">
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between py-4">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5 active" href="index.html" data-bs-dismiss="offcanvas">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="about.html" data-bs-dismiss="offcanvas">About Us</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="products.html" data-bs-dismiss="offcanvas">Products</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="categories.html" data-bs-dismiss="offcanvas">Categories</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="agent-locator.html" data-bs-dismiss="offcanvas">Find Agent</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="agent-portal.html" data-bs-dismiss="offcanvas">Agent Portal</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="blog.html" data-bs-dismiss="offcanvas">Blog</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="contact.html" data-bs-dismiss="offcanvas">Contact Us</a></li>
+      </ul>
+      <div class="pt-4 border-top">
+        <a href="become-agent.html" class="btn-aura-primary w-100 text-center">
+          <span>Become Agent</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <canvas id="leafCanvas"></canvas>
+      
+      <div class="container-custom position-relative hero-content">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6">
+            <div class="hero-badge-wrap mb-3">
+              <span class="badge-subtitle">
+                <i class="fas fa-seedling"></i> 100% Organic & Handcrafted
+              </span>
+            </div>
+            
+            <h1 class="hero-title">
+              Pure Nature, <span>Perfect Care.</span>
+            </h1>
+            
+            <p class="hero-desc">
+              Natural handcrafted soaps made with skin-loving ingredients that cleanse, nourish, and refresh every day. Experience luxury organic bathing rituals.
+            </p>
+            
+            <div class="hero-btns d-flex flex-wrap gap-3">
+              <a href="#products" class="btn-aura-primary">
+                <span>Explore Products</span>
+                <i class="fas fa-box-open"></i>
+              </a>
+              <a href="#distributor" class="btn-aura-outline">
+                <span>Become Distributor</span>
+                <i class="fas fa-handshake"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="hero-img-wrapper text-center">
+              <img src="assets/images/aura-shop (5).jpeg" alt="Aura Handcrafted Soap Lifestyle" class="hero-img-main img-fluid">
+              
+              <!-- Floating Glass Badges -->
+              <div class="floating-badge badge-hero-1">
+                <i class="fas fa-award text-aqua fs-3"></i>
+                <div class="text-start">
+                  <div class="fw-bold text-primary-green" style="font-size: 0.95rem;">Dermatologist Approved</div>
+                  <div class="text-muted-custom" style="font-size: 0.78rem;">100% Safe for Sensitive Skin</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-hero-2">
+                <i class="fas fa-leaf text-leaf-green fs-3"></i>
+                <div class="text-start">
+                  <div class="fw-bold text-primary-green" style="font-size: 0.95rem;">Zero Harmful Chemicals</div>
+                  <div class="text-muted-custom" style="font-size: 0.78rem;">Paraben & SLS Free</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- SECTION 2: ABOUT SECTION -->
+    <section id="about" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="about-img-frame">
+              <img src="assets/images/about_artisan.jpg" alt="Aura Soap Artisans Crafting Natural Soaps" class="about-img">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <span class="badge-subtitle mb-2">
+              <i class="fas fa-heart text-danger"></i> Our Story & Heritage
+            </span>
+            <h2 class="section-title">Crafting Pure Botanical Wellness Since Day One</h2>
+            <p class="text-muted-custom mb-4">
+              At Aura Soaps, we believe true luxury comes directly from nature. Founded with a passion for holistic skincare, we blend cold-pressed organic botanical oils, soothing plant extracts, and essential oils into small artisanal batches that respect both your skin and the earth.
+            </p>
+            
+            <div class="row g-4 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="why-icon-box m-0" style="width: 48px; height: 48px; font-size: 1.2rem;">
+                    <i class="fas fa-bullseye text-aqua"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1 font-heading text-primary-green">Our Mission</h5>
+                    <p class="text-muted-custom fs-7 mb-0">To formulate uncompromised natural soap solutions that nourish skin without synthetic chemicals.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="why-icon-box m-0" style="width: 48px; height: 48px; font-size: 1.2rem;">
+                    <i class="fas fa-eye text-leaf-green"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1 font-heading text-primary-green">Our Vision</h5>
+                    <p class="text-muted-custom fs-7 mb-0">Becoming the global hallmark for sustainable, luxurious, and accessible eco-friendly skincare.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Statistics Counters -->
+            <div class="row g-3">
+              <div class="col-6 col-md-3">
+                <div class="stats-card">
+                  <div class="counter-num" data-count="12" data-suffix="+">0</div>
+                  <div class="counter-label">Years Experience</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stats-card">
+                  <div class="counter-num" data-count="150" data-suffix="K+">0</div>
+                  <div class="counter-label">Happy Customers</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stats-card">
+                  <div class="counter-num" data-count="100" data-suffix="%">0</div>
+                  <div class="counter-label">Natural Ingredients</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stats-card">
+                  <div class="counter-num" data-count="35" data-suffix="+">0</div>
+                  <div class="counter-label">Countries Served</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCT CATEGORIES -->
+    <section id="categories" class="py-5 bg-section">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-th-large"></i> Signature Ranges
+          </span>
+          <h2 class="section-title">Explore Our Product Categories</h2>
+          <p class="text-muted-custom">Designed for every unique skin need—from daily moisture replenishment to specialized baby and therapeutic care.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Category 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-card">
+              <div class="category-img-wrapper">
+                <img src="assets/images/beauty_soap.jpg" alt="Laundry Bar Soaps" class="category-img">
+                <div class="category-overlay">
+                  <h3 class="category-title">Laundry Bar Soaps</h3>
+                  <span class="category-count">2 Products</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-card">
+              <div class="category-img-wrapper">
+                <img src="assets/images/herbal_soap.jpg" alt="Toilet Bath Soaps" class="category-img">
+                <div class="category-overlay">
+                  <h3 class="category-title">Toilet Bath Soaps</h3>
+                  <span class="category-count">1 Product</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="category-card">
+              <div class="category-img-wrapper">
+                <img src="assets/images/moisturizing_soap.jpg" alt="Natural Beauty Soaps" class="category-img">
+                <div class="category-overlay">
+                  <h3 class="category-title">Natural Beauty Soaps</h3>
+                  <span class="category-count">2 Products</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="category-card">
+              <div class="category-img-wrapper">
+                <img src="assets/images/baby_soap.jpg" alt="Personal Care" class="category-img">
+                <div class="category-overlay">
+                  <h3 class="category-title">Personal Care</h3>
+                  <span class="category-count">2 Products</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="category-card">
+              <div class="category-img-wrapper">
+                <img src="assets/images/medicinal_soap.jpg" alt="Paper & Sanitation" class="category-img">
+                <div class="category-overlay">
+                  <h3 class="category-title">Paper & Sanitation</h3>
+                  <span class="category-count">2 Products</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FEATURED PRODUCTS -->
+    <section id="products" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-4" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-sparkles"></i> Artisan Formulations
+          </span>
+          <h2 class="section-title">Our Featured Soap Collection</h2>
+          <p class="text-muted-custom">Hand-cut artisanal bars enriched with essential plant oils, vitamins, and minerals.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-btn-group" data-aos="fade-up">
+          <button class="btn-filter active" data-filter="all">All Products</button>
+          <button class="btn-filter" data-filter="laundry">Laundry</button>
+          <button class="btn-filter" data-filter="toilet-bath">Toilet & Bath</button>
+          <button class="btn-filter" data-filter="beauty">Beauty</button>
+          <button class="btn-filter" data-filter="personal-care">Personal Care</button>
+          <button class="btn-filter" data-filter="paper">Paper & Sanitation</button>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="laundry" data-aos="fade-up">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Laundry</span>
+                <img src="assets/images/aura-shop (5).jpeg" alt="Laundry Bar Soap 1 Kg" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Laundry Bar Soap (1 Kg)</h3>
+                <p class="product-desc">High-performing laundry soap packed with active enzymes and surfactants. Effectively lifts oil, dirt, and protein stains.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">1 Kg Bar</span>
+                  <span class="pill-sm">Active Enzymes</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Heavy Duty</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="laundry1">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="laundry" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Laundry</span>
+                <img src="assets/images/aura-shop (6).jpeg" alt="Laundry Bar Soap 250gm" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Laundry Bar Soap (250gm)</h3>
+                <p class="product-desc">Compact laundry bar soap. Blended with organic pressed oils, lifts dirt without leaving residues on fabric.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">250g Bar</span>
+                  <span class="pill-sm">Holistic Care</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Hand Washing</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="laundry2">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="toilet-bath" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Toilet Bath</span>
+                <img src="assets/images/aura-shop (7).jpeg" alt="Toilet Bath Soap" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Toilet Bath Soap</h3>
+                <p class="product-desc">Premium cleansing bar soap with rich lather. Cleanses skin effectively without stripping natural moisture.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">TFM 70-76%</span>
+                  <span class="pill-sm">Natural Glycerine</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Rich Lather</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="toilet">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="beauty" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Beauty Soap</span>
+                <img src="assets/images/aura-shop (8).jpeg" alt="Turmeric Natural Beauty Soap" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Turmeric Beauty Soap</h3>
+                <p class="product-desc">Primarily used to smoothly brighten dark spots, calm acne-prone skin, and reduce skin inflammation.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">Curcumin</span>
+                  <span class="pill-sm">Turmeric</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Brightening</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="beauty">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="beauty" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Beauty Soap</span>
+                <img src="assets/images/aura-shop (9).jpeg" alt="Shea Butter Natural Soap" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Shea Butter Natural Soap</h3>
+                <p class="product-desc">100% natural ingredients that help fade hyperpigmentation, combat breakouts, and provide anti-aging moisture.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">Shea Butter</span>
+                  <span class="pill-sm">100% Organic</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Moisturizing</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="shea">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="personal-care" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Personal Care</span>
+                <img src="assets/images/aura-shop (10).jpeg" alt="Male Rollon Blue" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Male Rollon (Blue)</h3>
+                <p class="product-desc">Clear, strong, no stains, no irritation combo roll-on. Keeps you fresh for 48-72 hours.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">Deodorant</span>
+                  <span class="pill-sm">48h Freshness</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>No Sweating</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="rollon-m">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="personal-care" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Personal Care</span>
+                <img src="assets/images/aura-shop (11).jpeg" alt="Female Rollon Red" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Female Rollon (Red)</h3>
+                <p class="product-desc">Smooth gel roll-on providing lightweight protection against body odor without clothing residue.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">Combo Gel</span>
+                  <span class="pill-sm">Quick Drying</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Gentle Protection</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="rollon-f">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="paper" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Paper & Sanitation</span>
+                <img src="assets/images/aura-shop (5).jpeg" alt="Luxury Toilet Paper" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Luxury Toilet Paper</h3>
+                <p class="product-desc">Pillow-soft, silky smooth virgin pulp fibers with embossed quilting. Septic safe & tear resistant.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">1-2 Ply</span>
+                  <span class="pill-sm">Virgin Pulp</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Ultra Soft</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="paper-toilet">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="col-md-6 col-lg-4 product-grid-item" data-category="paper" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-card">
+              <div class="product-img-box">
+                <span class="product-tag">Paper & Sanitation</span>
+                <img src="assets/images/aura-shop (6).jpeg" alt="Paper Hand Towel" class="product-img">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Paper Hand Towel (4 Rolls)</h3>
+                <p class="product-desc">Soft, strong, and highly absorbent paper hand towels engineered for kitchen and bath spills.</p>
+                <div class="ingredient-pills mb-3">
+                  <span class="pill-sm">4 Rolls Pack</span>
+                  <span class="pill-sm">Absorbent</span>
+                </div>
+                <div class="product-meta">
+                  <span class="text-leaf-green fw-bold fs-7"><i class="fas fa-check-circle me-1"></i>Tear Resistant</span>
+                  <button class="btn-aura-ghost btn-sm btn-view-product" data-key="paper-towel">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE AURA -->
+    <section id="why-aura" class="py-5 bg-section">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-shield-alt"></i> The Aura Standard
+          </span>
+          <h2 class="section-title">Why Choose Aura Soaps?</h2>
+          <p class="text-muted-custom">We set high standards in modern organic formulation and sustainable beauty practices.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3 class="why-title font-heading text-primary-green">100% Natural</h3>
+              <p class="text-muted-custom mb-0">Formulated exclusively with pure plant lipids, botanical extracts, and essential oils without synthetic fillers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3 class="why-title font-heading text-primary-green">Dermatologically Tested</h3>
+              <p class="text-muted-custom mb-0">Clinically tested by independent dermatologists to ensure gentle efficacy across all skin sensitivity levels.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h3 class="why-title font-heading text-primary-green">Eco Friendly</h3>
+              <p class="text-muted-custom mb-0">Zero single-use plastic. Packed in 100% recyclable, biodegradable FSC certified paper wrap with soy inks.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fas fa-paw"></i>
+              </div>
+              <h3 class="why-title font-heading text-primary-green">Cruelty Free</h3>
+              <p class="text-muted-custom mb-0">Leaping Bunny certified. We never test on animals at any stage of product development or sourcing.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3 class="why-title font-heading text-primary-green">Premium Ingredients</h3>
+              <p class="text-muted-custom mb-0">Ethically harvested cold-pressed oils, raw shea butter, and steam-distilled essential oils from certified growers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <i class="fas fa-check-double"></i>
+              </div>
+              <h3 class="why-title font-heading text-primary-green">Trusted Quality</h3>
+              <p class="text-muted-custom mb-0">Manufactured under strict ISO & GMP quality standards in small batches for freshness and potency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INGREDIENTS SECTION -->
+    <section id="ingredients" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="badge-subtitle mb-2">
+              <i class="fas fa-seedling"></i> Nature's Finest
+            </span>
+            <h2 class="section-title">Skin-Loving Botanicals In Every Bar</h2>
+            <p class="text-muted-custom mb-4">
+              We select every plant extract for its specific bio-active skin benefits. Free from artificial colors, synthetic fragrances, Parabens, and SLS.
+            </p>
+
+            <div class="ingredient-list d-flex flex-column gap-3">
+              <div class="ingredient-item">
+                <div class="ingredient-icon"><i class="fas fa-spa"></i></div>
+                <div>
+                  <h5 class="mb-1 font-heading text-primary-green fs-5">Aloe Vera</h5>
+                  <p class="text-muted-custom fs-7 mb-0">Cools inflammation, repairs sun exposure damage, and restores cell hydration.</p>
+                </div>
+              </div>
+
+              <div class="ingredient-item">
+                <div class="ingredient-icon"><i class="fas fa-mortar-pestle"></i></div>
+                <div>
+                  <h5 class="mb-1 font-heading text-primary-green fs-5">Raw Shea Butter</h5>
+                  <p class="text-muted-custom fs-7 mb-0">Rich in vitamins A, E & F to deeply restore moisture barriers and skin elasticity.</p>
+                </div>
+              </div>
+
+              <div class="ingredient-item">
+                <div class="ingredient-icon"><i class="fas fa-tint"></i></div>
+                <div>
+                  <h5 class="mb-1 font-heading text-primary-green fs-5">Cold-Pressed Olive Oil</h5>
+                  <p class="text-muted-custom fs-7 mb-0">Packed with squalene and antioxidants that shield skin from environmental stress.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="ingredient-item mb-3">
+                  <div class="ingredient-icon"><i class="fas fa-tree"></i></div>
+                  <div>
+                    <h5 class="mb-1 font-heading text-primary-green fs-5">Virgin Coconut Oil</h5>
+                    <p class="text-muted-custom fs-7 mb-0">Creates a velvety rich lather while providing natural lauric acid cleansing protection.</p>
+                  </div>
+                </div>
+
+                <div class="ingredient-item">
+                  <div class="ingredient-icon"><i class="fas fa-fan"></i></div>
+                  <div>
+                    <h5 class="mb-1 font-heading text-primary-green fs-5">Lavender Flower Oil</h5>
+                    <p class="text-muted-custom fs-7 mb-0">Calms sensory tension with therapeutic aromatherapy while clarifying complexion.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="ingredient-item mb-3">
+                  <div class="ingredient-icon"><i class="fas fa-flask"></i></div>
+                  <div>
+                    <h5 class="mb-1 font-heading text-primary-green fs-5">Tea Tree Oil</h5>
+                    <p class="text-muted-custom fs-7 mb-0">Natural antimicrobial botanical essential oil that balances oil and clears blemishes.</p>
+                  </div>
+                </div>
+
+                <div class="glass-card p-4 text-center">
+                  <i class="fas fa-leaf text-leaf-green fs-1 mb-2"></i>
+                  <h5 class="font-heading text-primary-green mb-1">Clean Beauty Pledge</h5>
+                  <p class="text-muted-custom fs-7 mb-0">0% Sulfates • 0% Parabens • 0% Synthetic Dyes • 100% Vegan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: MANUFACTURING PROCESS TIMELINE -->
+    <section id="process" class="py-5 bg-section">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-cogs"></i> Craftsmanship & Precision
+          </span>
+          <h2 class="section-title">Our Artisanal Process</h2>
+          <p class="text-muted-custom">How we craft cold-processed luxury soaps from farm-fresh harvest to your home.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line d-none d-lg-block"></div>
+          <div class="row g-4">
+            
+            <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-step">
+                <div class="timeline-badge"><i class="fas fa-seedling"></i></div>
+                <div class="timeline-step-num">Step 01</div>
+                <h4 class="timeline-title">Natural Sourcing</h4>
+                <p class="text-muted-custom fs-7 mb-0">Selecting ethically grown botanical oils & herbs.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="timeline-step">
+                <div class="timeline-badge"><i class="fas fa-microscope"></i></div>
+                <div class="timeline-step-num">Step 02</div>
+                <h4 class="timeline-title">Research</h4>
+                <p class="text-muted-custom fs-7 mb-0">Formulating pH-balanced skin nutrition recipes.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="timeline-step">
+                <div class="timeline-badge"><i class="fas fa-fire-alt"></i></div>
+                <div class="timeline-step-num">Step 03</div>
+                <h4 class="timeline-title">Cold Production</h4>
+                <p class="text-muted-custom fs-7 mb-0">Slow cold-process batch blending and pouring.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="timeline-step">
+                <div class="timeline-badge"><i class="fas fa-vial"></i></div>
+                <div class="timeline-step-num">Step 04</div>
+                <h4 class="timeline-title">Quality Testing</h4>
+                <p class="text-muted-custom fs-7 mb-0">Dermatological safety & stability testing.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="timeline-step">
+                <div class="timeline-badge"><i class="fas fa-box"></i></div>
+                <div class="timeline-step-num">Step 05</div>
+                <h4 class="timeline-title">Eco Packaging</h4>
+                <p class="text-muted-custom fs-7 mb-0">Hand wrapping in plastic-free FSC recycled paper.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="timeline-step">
+                <div class="timeline-badge"><i class="fas fa-truck-loading"></i></div>
+                <div class="timeline-step-num">Step 06</div>
+                <h4 class="timeline-title">Distribution</h4>
+                <p class="text-muted-custom fs-7 mb-0">Worldwide eco-shipping to retail partners.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: BECOME DISTRIBUTOR -->
+    <section id="distributor" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="distributor-banner" data-aos="zoom-in">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6" data-aos="fade-right">
+              <span class="badge bg-white text-dark rounded-pill px-3 py-1 fw-bold mb-3 shadow-sm">
+                <i class="fas fa-handshake text-warning me-1"></i> B2B & GLOBAL PARTNERSHIPS
+              </span>
+              <h2 class="text-dark font-heading display-5 fw-bold mb-3">Become An Authorized Aura Soaps Distributor</h2>
+              <p class="text-dark fs-6 mb-4 opacity-90 line-height-lg">
+                Join our expanding international network of premium retail partners, eco-boutiques, spas, and wellness distributors worldwide. Capitalize on the rapidly growing luxury organic skincare market.
+              </p>
+
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="distributor-benefit-item bg-white bg-opacity-75 p-2 rounded-3 border">
+                    <div class="distributor-benefit-icon bg-warning text-dark"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                      <h6 class="mb-0 text-dark font-heading fw-bold">Marketing Support</h6>
+                      <span class="text-dark fs-7 opacity-75">High-res assets & POS display units</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="distributor-benefit-item bg-white bg-opacity-75 p-2 rounded-3 border">
+                    <div class="distributor-benefit-icon bg-warning text-dark"><i class="fas fa-plane-departure"></i></div>
+                    <div>
+                      <h6 class="mb-0 text-dark font-heading fw-bold">Fast Global Logistics</h6>
+                      <span class="text-dark fs-7 opacity-75">Express priority freight shipping</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="distributor-benefit-item bg-white bg-opacity-75 p-2 rounded-3 border">
+                    <div class="distributor-benefit-icon bg-warning text-dark"><i class="fas fa-tags"></i></div>
+                    <div>
+                      <h6 class="mb-0 text-dark font-heading fw-bold">Bulk Order Pricing</h6>
+                      <span class="text-dark fs-7 opacity-75">Highly competitive wholesale margins</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="distributor-benefit-item bg-white bg-opacity-75 p-2 rounded-3 border">
+                    <div class="distributor-benefit-icon bg-warning text-dark"><i class="fas fa-graduation-cap"></i></div>
+                    <div>
+                      <h6 class="mb-0 text-dark font-heading fw-bold">Product Training</h6>
+                      <span class="text-dark fs-7 opacity-75">Staff training & sales guidance</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Distributor Lead Form -->
+            <div class="col-lg-6">
+              <div class="glass-card p-4 p-md-5 text-dark">
+                <h3 class="font-heading text-primary-green mb-1 fs-3">Apply For Partnership</h3>
+                <p class="text-muted-custom fs-7 mb-4">Complete the inquiry form to receive our official wholesale catalog & pricing tier list.</p>
+                
+                <form id="distributorForm">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label class="form-label fs-7 fw-bold text-primary-green">Full Name *</label>
+                      <input type="text" class="form-control form-aura-control" placeholder="e.g. Sarah Jenkins" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label class="form-label fs-7 fw-bold text-primary-green">Company / Retailer Name *</label>
+                      <input type="text" class="form-control form-aura-control" placeholder="e.g. Pure Botanical Spa" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label class="form-label fs-7 fw-bold text-primary-green">Country / Region *</label>
+                      <input type="text" class="form-control form-aura-control" placeholder="e.g. United Kingdom" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label class="form-label fs-7 fw-bold text-primary-green">Phone Number *</label>
+                      <input type="tel" class="form-control form-aura-control" placeholder="+1 (555) 000-0000" required>
+                    </div>
+
+                    <div class="col-12">
+                      <label class="form-label fs-7 fw-bold text-primary-green">Business Email *</label>
+                      <input type="email" class="form-control form-aura-control" placeholder="sarah@botanicalspa.com" required>
+                    </div>
+
+                    <div class="col-12">
+                      <label class="form-label fs-7 fw-bold text-primary-green">Message / Estimated Order Volume</label>
+                      <textarea class="form-control form-aura-control" rows="3" placeholder="Tell us about your store location and estimated order quantities..."></textarea>
+                    </div>
+
+                    <div class="col-12 mt-4">
+                      <button type="submit" class="btn-aura-primary w-100">
+                        <span>Submit Application</span>
+                        <i class="fas fa-paper-plane"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8.5: PRINCIPAL AGENT LOCATOR NETWORK -->
+    <section id="agent-locator-network" class="py-5 bg-section">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-map-marked-alt text-aqua"></i> Regional Agent Network
+          </span>
+          <h2 class="section-title">Find An Authorized Principal Agent</h2>
+          <p class="text-muted-custom">Our nationwide and Great Lakes regional wholesale distribution network spans over 120 target principal agents across Rwanda, DRC, Uganda, and Tanzania.</p>
+        </div>
+
+        <div class="row g-4 align-items-center mb-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="glass-card p-4 p-md-5">
+              <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill mb-3">
+                <i class="fas fa-chart-pie me-1"></i> Regional Distribution Coverage
+              </span>
+              <h3 class="font-heading text-primary-green fs-2 mb-3">120 Target Principal Agent Shops</h3>
+              <p class="text-muted-custom mb-4">
+                We maintain active wholesale agents across 4 major regional markets. Access direct wholesale inventory, marketing materials, and localized customer support near you.
+              </p>
+
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="p-3 bg-white rounded-3 border text-center">
+                    <div class="fw-bold text-primary-green fs-3">84</div>
+                    <div class="text-muted-custom fs-8">Rwanda Domestic Agents</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 bg-white rounded-3 border text-center">
+                    <div class="fw-bold text-primary-green fs-3">36</div>
+                    <div class="text-muted-custom fs-8">Regional Hub Agents</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-top d-flex flex-wrap gap-2 align-items-center">
+                <span class="fs-7 fw-bold text-muted-custom">Key Markets:</span>
+                <span class="badge bg-light text-dark border">Kigali (20)</span>
+                <span class="badge bg-light text-dark border">Southern Prov (20)</span>
+                <span class="badge bg-light text-dark border">Western Prov (16)</span>
+                <span class="badge bg-light text-dark border">DRC (15)</span>
+                <span class="badge bg-light text-dark border">Uganda (11)</span>
+                <span class="badge bg-light text-dark border">Tanzania (10)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="glass-card p-4 p-md-5 text-center">
+              <div class="why-icon-box mx-auto mb-3" style="width: 70px; height: 70px; font-size: 2rem;">
+                <i class="fas fa-store-alt text-leaf-green"></i>
+              </div>
+              <h4 class="font-heading text-primary-green fs-3 mb-2">Locate An Agent Near You</h4>
+              <p class="text-muted-custom mb-4">Search by province, district, or city to find official Aura Soaps stockists and principal wholesale agent partners.</p>
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="agent-locator.html" class="btn-aura-primary">
+                  <span>Open Agent Directory</span>
+                  <i class="fas fa-search-location"></i>
+                </a>
+                <a href="agent-portal.html" class="btn-aura-outline">
+                  <span>Agent Portal Login</span>
+                  <i class="fas fa-user-lock"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8.6: ARTISANAL GALLERY SHOWCASE -->
+    <section id="gallery-showcase" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-camera text-leaf-green"></i> Craftsmanship Showcase
+          </span>
+          <h2 class="section-title">Behind The Craft: Artisanal Gallery</h2>
+          <p class="text-muted-custom">Explore behind-the-scenes photography from our cold-process formulation vats, botanical harvests, and eco packaging.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card cursor-pointer" onclick="openLightbox('assets/images/aura-shop (5).jpeg', 'Lavender & Kale Organic Soap Stack')">
+              <img src="assets/images/aura-shop (5).jpeg" alt="Organic Soap Stack" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h5 class="fw-bold text-white mb-1">Organic Soap Stacks</h5>
+                  <span class="fs-8 text-white-50"><i class="fas fa-search-plus me-1"></i> Click to Zoom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-card cursor-pointer" onclick="openLightbox('assets/images/aura-shop (6).jpeg', 'Artisanal Wooden Soap Molds')">
+              <img src="assets/images/aura-shop (6).jpeg" alt="Artisanal Molds" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h5 class="fw-bold text-white mb-1">Artisanal Wooden Molds</h5>
+                  <span class="fs-8 text-white-50"><i class="fas fa-search-plus me-1"></i> Click to Zoom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="gallery-card cursor-pointer" onclick="openLightbox('assets/images/aura-shop (7).jpeg', 'Steam Distillation of Essential Oils')">
+              <img src="assets/images/aura-shop (7).jpeg" alt="Steam Distillation" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h5 class="fw-bold text-white mb-1">Steam Distillation of Oils</h5>
+                  <span class="fs-8 text-white-50"><i class="fas fa-search-plus me-1"></i> Click to Zoom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="gallery-card cursor-pointer" onclick="openLightbox('assets/images/aura-shop (8).jpeg', '6-Week Cold-Cured Soap Bars')">
+              <img src="assets/images/aura-shop (8).jpeg" alt="Cold-Cured Soap" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h5 class="fw-bold text-white mb-1">6-Week Cold Curing Process</h5>
+                  <span class="fs-8 text-white-50"><i class="fas fa-search-plus me-1"></i> Click to Zoom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="gallery-card cursor-pointer" onclick="openLightbox('assets/images/aura-shop (9).jpeg', 'Raw Organic Shea Butter Harvest')">
+              <img src="assets/images/aura-shop (9).jpeg" alt="Shea Butter Harvest" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h5 class="fw-bold text-white mb-1">Raw Shea Harvest</h5>
+                  <span class="fs-8 text-white-50"><i class="fas fa-search-plus me-1"></i> Click to Zoom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="gallery-card cursor-pointer" onclick="openLightbox('assets/images/aura-shop (10).jpeg', 'Eco-Friendly Zero Waste Packaging')">
+              <img src="assets/images/aura-shop (10).jpeg" alt="Zero Waste Packaging" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h5 class="fw-bold text-white mb-1">Zero-Plastic Packaging</h5>
+                  <span class="fs-8 text-white-50"><i class="fas fa-search-plus me-1"></i> Click to Zoom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="gallery.html" class="btn-aura-outline">
+            <span>Explore Full Photo Gallery</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: TESTIMONIALS -->
+    <section id="testimonials" class="py-5 bg-section">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-star text-warning"></i> Customer Love
+          </span>
+          <h2 class="section-title">What Skincare Enthusiasts Say</h2>
+          <p class="text-muted-custom">Over 150,000 satisfied users adore Aura Soaps for daily bathing perfection.</p>
+        </div>
+
+        <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div>
+                  <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "The Shea Butter & Oat Milk bar transformed my dry winter skin within 3 days! It lathers luxuriously without leaving any tight feeling. Truly a high-end spa experience in my own home."
+                  </p>
+                </div>
+                <div class="testimonial-user">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="user-avatar">
+                  <div>
+                    <div class="user-name">Elena Rostova</div>
+                    <div class="user-role">Wellness Blogger • London, UK</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div>
+                  <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "We stock Aura Soaps in our boutique resort spas across Bali. Our guests constantly compliment the natural botanical scents and exquisite plastic-free packaging!"
+                  </p>
+                </div>
+                <div class="testimonial-user">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="David Miller" class="user-avatar">
+                  <div>
+                    <div class="user-name">David Miller</div>
+                    <div class="user-role">Resort Director • Bali, Indonesia</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div>
+                  <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Finding a soap mild enough for my baby sensitive skin was tough until we found the Chamomile & Avocado bar. Gentle, soothing, and zero redness ever since!"
+                  </p>
+                </div>
+                <div class="testimonial-user">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Sophia Lin" class="user-avatar">
+                  <div>
+                    <div class="user-name">Sophia Lin</div>
+                    <div class="user-role">Mother & Organic Living Advocate</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div>
+                  <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "As a retail stockist in Kigali, Aura Soaps has been our top-selling organic skincare brand for 2 years. Reliable supply chain, premium quality, and happy customers!"
+                  </p>
+                </div>
+                <div class="testimonial-user">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Vance" class="user-avatar">
+                  <div>
+                    <div class="user-name">Marcus Vance</div>
+                    <div class="user-role">Principal Agent • Kigali, Rwanda</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div>
+                  <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "The Turmeric Beauty Soap cleared up hyperpigmentation spots I had struggled with for years. Natural, effective, and wonderful subtle scent!"
+                  </p>
+                </div>
+                <div class="testimonial-user">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Amara Diallo" class="user-avatar">
+                  <div>
+                    <div class="user-name">Amara Diallo</div>
+                    <div class="user-role">Holistic Esthetician • Kampala</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div>
+                  <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "The Male Rollon Blue keeps me fresh through intense workout sessions without synthetic harsh chemicals or staining my shirts. Unbeatable performance!"
+                  </p>
+                </div>
+                <div class="testimonial-user">
+                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80" alt="Claire Fontaine" class="user-avatar">
+                  <div>
+                    <div class="user-name">Claire Fontaine</div>
+                    <div class="user-role">Eco-Living Editor • Paris</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: BLOG SECTION -->
+    <section id="blog" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-book-open"></i> Botanical Journal
+          </span>
+          <h2 class="section-title">Latest From Our Skincare Blog</h2>
+          <p class="text-muted-custom">Insights, eco-living advice, and formulation secrets from our master soap makers.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Blog 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-card">
+              <div class="blog-img-box">
+                <img src="assets/images/about_artisan.jpg" alt="Art of Handcrafted Soap" class="blog-img">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="fas fa-folder me-1 text-aqua"></i>Skincare Guide</span>
+                  <span><i class="fas fa-calendar-alt me-1 text-leaf-green"></i>Aug 02, 2026</span>
+                </div>
+                <h3 class="blog-title">The Art of Handcrafted Soap: Why Cold Process Matters</h3>
+                <p class="text-muted-custom fs-7 mb-3">Discover how slow cold-cure soap crafting preserves skin-essential glycerine and active botanicals...</p>
+                <div class="mt-auto">
+                  <button class="btn-aura-ghost btn-sm btn-read-blog" data-key="1">Read Article <i class="fas fa-arrow-right ms-1"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-card">
+              <div class="blog-img-box">
+                <img src="assets/images/herbal_soap.jpg" alt="Top Botanical Oils" class="blog-img">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="fas fa-folder me-1 text-aqua"></i>Ingredients Focus</span>
+                  <span><i class="fas fa-calendar-alt me-1 text-leaf-green"></i>Jul 28, 2026</span>
+                </div>
+                <h3 class="blog-title">Top 5 Botanical Oils for Radiant Natural Skin</h3>
+                <p class="text-muted-custom fs-7 mb-3">How cold-pressed Moroccan argan, avocado, and olive lipids strengthen your skin protective moisture barrier...</p>
+                <div class="mt-auto">
+                  <button class="btn-aura-ghost btn-sm btn-read-blog" data-key="2">Read Article <i class="fas fa-arrow-right ms-1"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 3 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card">
+              <div class="blog-img-box">
+                <img src="assets/images/hero_soap_lifestyle.jpg" alt="Sustainable Packaging" class="blog-img">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="fas fa-folder me-1 text-aqua"></i>Eco Living</span>
+                  <span><i class="fas fa-calendar-alt me-1 text-leaf-green"></i>Jul 15, 2026</span>
+                </div>
+                <h3 class="blog-title">Sustainable Packaging: Our Zero-Plastic Commitment</h3>
+                <p class="text-muted-custom fs-7 mb-3">Inside our FSC paper wrap initiatives and how plastic-free cosmetics protect marine ecosystems worldwide...</p>
+                <div class="mt-auto">
+                  <button class="btn-aura-ghost btn-sm btn-read-blog" data-key="3">Read Article <i class="fas fa-arrow-right ms-1"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: FAQ SECTION -->
+    <section id="faq" class="py-5 bg-section">
+      <div class="container-custom">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge-subtitle">
+            <i class="fas fa-question-circle"></i> Got Questions?
+          </span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="text-muted-custom">Find answers regarding product ingredients, suitability, shipping, and wholesale partnerships.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9" data-aos="fade-up">
+            <div class="accordion accordion-aura" id="faqAccordion">
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                    Are Aura Soaps suitable for sensitive or eczema-prone skin?
+                  </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes! All Aura Soaps are dermatologically tested and crafted using gentle cold-processed plant oils. Our <strong>Shea Butter & Oat Milk</strong> bar and <strong>Baby Care Chamomile</strong> bar are specifically formulated for hyper-sensitive, dry, or eczema-prone skin conditions.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                    What makes cold-processed soap superior to commercial bar soap?
+                  </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Commercial detergent bars remove natural skin-hydrating glycerine to sell separately in lotion products. Our cold-process method retains 100% of naturally occurring botanical glycerine and unrefined plant lipids, leaving skin feeling soft, moisturized, and protected.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                    How do I become an international retailer or distributor?
+                  </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Simply navigate to our <a href="#distributor" class="text-aqua fw-bold">Become Distributor</a> section and submit the partner lead form. Our global trade representative will review your business credentials and send our wholesale catalog and tier pricing within 24 hours.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                    Are your packaging materials 100% plastic-free and recyclable?
+                  </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Absolutely. We are strictly committed to zero plastic waste. Every Aura Soap bar is wrapped in 100% FSC-certified recycled paper printed with natural vegetable soy inks, making our entire product line fully compostable and recyclable.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: CONTACT SECTION -->
+    <section id="contact" class="py-5 my-lg-4">
+      <div class="container-custom">
+        <div class="row gy-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="badge-subtitle mb-2">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </span>
+            <h2 class="section-title">We’d Love To Hear From You</h2>
+            <p class="text-muted-custom mb-4">Have questions about our ingredients, orders, or eco practices? Reach out to our dedicated support team.</p>
+
+            <div class="contact-info-card mb-4">
+              <div class="contact-detail-item">
+                <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h6 class="font-heading text-primary-green mb-1 fs-5">Headquarters</h6>
+                  <p class="text-muted-custom fs-7 mb-0">Aura Botanical Park, 108 Eco Sanctuary Way, London, EC1A 1BB, UK</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-icon-box"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <h6 class="font-heading text-primary-green mb-1 fs-5">Call Us</h6>
+                  <p class="text-muted-custom fs-7 mb-0">+44 20 7946 0912 / Mon - Fri, 9am - 6pm GMT</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-icon-box"><i class="fas fa-paper-plane"></i></div>
+                <div>
+                  <h6 class="font-heading text-primary-green mb-1 fs-5">Email Inquiries</h6>
+                  <p class="text-muted-custom fs-7 mb-0">care@aurasoaps.com / partners@aurasoaps.com</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-box">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.905021272378!2d-0.10159868422971295!3d51.51493097963627!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b538da2c9a9%3A0x6332155e8c11e3b6!2sSt%20Paul&#39;s%20Cathedral!5e0!3m2!1sen!2suk!4v1680000000000!5m2!1sen!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="glass-card p-4 p-md-5">
+              <h3 class="font-heading text-primary-green mb-1 fs-3">Send Us A Message</h3>
+              <p class="text-muted-custom fs-7 mb-4">Fill out the form below and we will respond within 12 hours.</p>
+
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label fs-7 fw-bold text-primary-green">Your Name *</label>
+                    <input type="text" class="form-control form-aura-control" placeholder="e.g. Emma Watson" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="form-label fs-7 fw-bold text-primary-green">Email Address *</label>
+                    <input type="email" class="form-control form-aura-control" placeholder="emma@example.com" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="form-label fs-7 fw-bold text-primary-green">Phone Number</label>
+                    <input type="tel" class="form-control form-aura-control" placeholder="+1 (555) 000-0000">
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="form-label fs-7 fw-bold text-primary-green">Subject *</label>
+                    <select class="form-select form-aura-control" required>
+                      <option value="">Select a topic</option>
+                      <option value="product">Product Inquiry</option>
+                      <option value="order">Order Status</option>
+                      <option value="press">Press & Media</option>
+                      <option value="other">General Question</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label fs-7 fw-bold text-primary-green">Your Message *</label>
+                    <textarea class="form-control form-aura-control" rows="5" placeholder="How can we assist your natural skincare journey?" required></textarea>
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn-aura-primary">
+                      <span>Send Message</span>
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 13: FOOTER -->
+  <footer class="footer-aura">
+    <div class="container-custom">
+      <div class="row gy-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="mb-3">
+            <img src="assets/images/logo.png" alt="Aura Soaps Logo" class="footer-logo-img">
+          </div>
+          <p class="text-white-50 fs-7 mb-4">
+            Natural Care • Pure Touch. Artisanal, eco-friendly luxury skincare crafted with organic cold-pressed plant lipids and steam-distilled essential oils.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#ingredients">Our Ingredients</a></li>
+            <li><a href="#why-aura">Why Choose Aura</a></li>
+            <li><a href="#blog">Botanical Journal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-title">Categories</h5>
+          <ul class="footer-links">
+            <li><a href="#products">Beauty Soaps</a></li>
+            <li><a href="#products">Herbal Soaps</a></li>
+            <li><a href="#products">Moisturizing Soaps</a></li>
+            <li><a href="#products">Baby Care</a></li>
+            <li><a href="#products">Medicinal Charcoal</a></li>
+            <li><a href="#products">Luxury Gold Collection</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-title">Newsletter</h5>
+          <p class="text-white-50 fs-7 mb-3">Subscribe for botanical skincare tips, new product drops, and exclusive distributor news.</p>
+          
+          <form id="newsletterForm" class="d-flex gap-2 mb-3">
+            <input type="email" class="form-control form-aura-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn-aura-primary px-3" aria-label="Subscribe">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <span class="text-white-50 fs-8"><i class="fas fa-shield-alt text-aqua me-1"></i> We respect your privacy. Unsubscribe anytime.</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-white-50">
+        <div>
+          &copy; 2026 Aura Soaps. All Rights Reserved. Natural Care • Pure Touch.
+        </div>
+        <div class="d-flex flex-wrap gap-4">
+          <a href="privacy-policy.html" class="text-white-50 text-decoration-none fs-8">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-white-50 text-decoration-none fs-8">Terms & Conditions</a>
+          <a href="shipping-policy.html" class="text-white-50 text-decoration-none fs-8">Shipping Policy</a>
+          <a href="return-policy.html" class="text-white-50 text-decoration-none fs-8">Return Policy</a>
+          <a href="agent-portal.html" class="text-white-50 text-decoration-none fs-8">Agent Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal fade modal-aura" id="productDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="badge-subtitle mb-1" id="modalProdCategory">Category</span>
+            <h3 class="modal-title font-heading text-primary-green fs-2 mb-0" id="modalProdTitle">Product Name</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+              <img src="" id="modalProdImg" alt="Product Image" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-md-7">
+              <p class="text-muted-custom mb-3" id="modalProdDesc">Description...</p>
+              
+              <h6 class="font-heading text-primary-green fs-5 mb-2">Key Skin Benefits:</h6>
+              <ul class="list-unstyled mb-3" id="modalProdBenefits"></ul>
+
+              <h6 class="font-heading text-primary-green fs-5 mb-2">Botanical Ingredients:</h6>
+              <div id="modalProdIngredients" class="d-flex flex-wrap gap-1"></div>
+
+              <div class="mt-4 pt-3 border-top d-flex gap-3">
+                <a href="#distributor" class="btn-aura-primary" data-bs-dismiss="modal">
+                  <span>Inquire For Wholesale</span>
+                  <i class="fas fa-handshake"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG DETAIL MODAL -->
+  <div class="modal fade modal-aura" id="blogDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="text-aqua fw-bold fs-7 mb-1" id="modalBlogCategory">Category</span>
+            <h3 class="modal-title font-heading text-primary-green fs-2 mb-0" id="modalBlogTitle">Article Title</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted-custom fs-6 line-height-lg" id="modalBlogDesc">Article content...</p>
+          <div class="alert bg-section border-0 text-primary-green mt-4">
+            <i class="fas fa-leaf me-2 text-leaf-green"></i> <strong>Aura Commitment:</strong> All our formulations adhere to strict EU and US organic skincare standards.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center position-relative">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal"></button>
+          <img src="" id="lightboxImg" alt="Lightbox Preview" class="img-fluid rounded-4 shadow-lg mb-2">
+          <h5 class="text-white font-heading mt-2" id="lightboxCaption">Caption</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP 3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper 11 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

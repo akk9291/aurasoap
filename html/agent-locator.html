@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Principal Agent | Aura Soaps - Agent Locator</title>
+  <meta name="description" content="Locate an authorized Aura Soaps Principal Agent in your province, district, or town. Active coverage in Rwanda, DRC, Uganda, and Tanzania.">
+  <meta name="keywords" content="agent locator, find soap distributor, regional soap agent, kigali agents, Great Lakes region wholesale">
+  <meta name="author" content="Aura Soaps">
+  
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-aura" id="mainNavbar">
+      <div class="container-custom d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-aura" href="index.html">
+          <img src="assets/images/logo.png" alt="Aura Soaps" class="brand-logo-img">
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-aura d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-end align-items-center">
+          <ul class="navbar-nav me-4 gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="categories.html">Categories</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura active" href="agent-locator.html">Find Agent</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="agent-portal.html">Agent Portal</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-aura" href="contact.html">Contact</a></li>
+          </ul>
+          <a href="become-agent.html" class="btn-aura-primary">
+            <span>Become Agent</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas -->
+  <div class="offcanvas offcanvas-end offcanvas-aura" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header border-bottom">
+      <img src="assets/images/logo.png" alt="Aura Soaps Logo" style="height: 42px;">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between py-4">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="categories.html">Categories</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5 active" href="agent-locator.html">Find Agent</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="agent-portal.html">Agent Portal</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-aura fs-5" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE BANNER -->
+    <section class="page-banner text-center">
+      <div class="container-custom">
+        <nav class="breadcrumb-aura">
+          <a href="index.html">Home</a>
+          <span class="separator"><i class="fas fa-chevron-right"></i></span>
+          <span class="current">Find a Principal Agent</span>
+        </nav>
+        <h1 class="page-banner-title">Principal Agent Locator</h1>
+        <p class="page-banner-subtitle mx-auto">Locate active wholesalers and retail agents inside our domestic and regional Great Lakes network.</p>
+      </div>
+    </section>
+
+    <!-- AGENT DATABASE SECTION -->
+    <section class="py-6">
+      <div class="container-custom">
+        
+        <!-- Search & Filter Controls -->
+        <div class="row align-items-center mb-5 gy-3">
+          <div class="col-lg-4 col-md-6">
+            <div class="search-box-aura">
+              <i class="fas fa-search search-box-icon"></i>
+              <input type="text" class="search-input-aura" id="locatorSearch" placeholder="Search City, Town or District...">
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <select class="form-select form-aura-control" id="locatorCountry">
+              <option value="all">All Markets (Rwanda & Regional)</option>
+              <option value="rwanda">Rwanda Domestic Market</option>
+              <option value="regional">Regional: Great Lakes Market</option>
+              <option value="drc">DRC Only</option>
+              <option value="uganda">Uganda Only</option>
+              <option value="tanzania">Tanzania Only</option>
+            </select>
+          </div>
+          <div class="col-lg-4 text-md-end text-start">
+            <div class="text-muted fs-6">
+              Total Target Agents: <span class="fw-bold text-primary-green fs-5">120 Agents</span> (84 Domestic, 36 Regional)
+            </div>
+          </div>
+        </div>
+
+        <!-- Locator Table -->
+        <div class="glass-card p-4 shadow-sm border overflow-hidden">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="locatorTable">
+              <thead class="table-light text-dark font-heading">
+                <tr>
+                  <th scope="col" style="width: 80px;">No.</th>
+                  <th scope="col">Market / Country</th>
+                  <th scope="col">Provincial City / Town</th>
+                  <th scope="col">Province / State</th>
+                  <th scope="col" class="text-end">Required Agents (Agent Shops)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Rwanda Domestic -->
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">1</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Kigali</strong></td>
+                  <td>Kigali</td>
+                  <td class="text-end fw-bold text-primary-green">20</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">2</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Nyanza (Nyanza)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">3</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Gisagara (Ndora)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">4</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Nyaruguru (Kibeho)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">5</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Huye (Butare City)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">6</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Nyamagabe (Gasaka Town)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">7</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Ruhango (Ruhango City)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">8</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Muhanga (Gitarama/Muhanga City)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">9</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Kamonyi (Kamonyi City)</strong></td>
+                  <td>Southern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">10</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Karongi (Kibuye/Rubengera)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">3</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">11</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Rutsiro (Gihango Town)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">12</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Rubavu (Gisenyi)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">13</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Nyabihu (Mukamira Town)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">3</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">14</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Ngororero (Ngororero Town)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">15</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Rusizi (Kamembe)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">16</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Nyamasheke (Kagano/Cyangugu)</strong></td>
+                  <td>Western</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">17</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Rulindo (Tare Town)</strong></td>
+                  <td>Northern</td>
+                  <td class="text-end fw-bold text-primary-green">3</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">18</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Gakenke (Gakenke Town)</strong></td>
+                  <td>Northern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">19</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Musanze (Ruhengeri City)</strong></td>
+                  <td>Northern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">20</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Burera (Cyeru Town)</strong></td>
+                  <td>Northern</td>
+                  <td class="text-end fw-bold text-primary-green">3</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">21</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Gicumbi (Byumba)</strong></td>
+                  <td>Northern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">22</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Rwamagana (Rwamagana City)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">23</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Nyagatare (Nyagatare City)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">24</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Gatsibo (Kabarore Town)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">25</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Kayonza (Kayonza Town)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">26</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Kirehe (Rusumo)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">27</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Ngoma (Kibungo)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="rwanda" data-country="rwanda">
+                  <td class="fw-bold">28</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1"><i class="fas fa-flag me-1"></i>Rwanda</span></td>
+                  <td><strong>Bugesera (Nyamata)</strong></td>
+                  <td>Eastern</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+
+                <!-- Regional Markets -->
+                <!-- DRC -->
+                <tr class="locator-row" data-market="regional" data-country="drc">
+                  <td class="fw-bold">29</td>
+                  <td><span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"><i class="fas fa-globe me-1"></i>DR Congo</span></td>
+                  <td><strong>Goma</strong></td>
+                  <td>North Kivu</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="drc">
+                  <td class="fw-bold">30</td>
+                  <td><span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"><i class="fas fa-globe me-1"></i>DR Congo</span></td>
+                  <td><strong>Bukavu</strong></td>
+                  <td>South Kivu</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="drc">
+                  <td class="fw-bold">31</td>
+                  <td><span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"><i class="fas fa-globe me-1"></i>DR Congo</span></td>
+                  <td><strong>Uvira</strong></td>
+                  <td>South Kivu</td>
+                  <td class="text-end fw-bold text-primary-green">4</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="drc">
+                  <td class="fw-bold">32</td>
+                  <td><span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"><i class="fas fa-globe me-1"></i>DR Congo</span></td>
+                  <td><strong>Bunia</strong></td>
+                  <td>Ituri Province</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+
+                <!-- Uganda -->
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">33</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Kabale</strong></td>
+                  <td>Kigezi Sub-region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">34</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Kisoro</strong></td>
+                  <td>Kigezi Sub-region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">35</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Mbarara</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">3</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">36</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Rukungiri</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">37</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Ibanda</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">38</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Bushenyi</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">39</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Isingiro</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">40</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Kanungu</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">41</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Kiruhura</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">42</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Ntungamo</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+                <tr class="locator-row" data-market="regional" data-country="uganda">
+                  <td class="fw-bold">43</td>
+                  <td><span class="badge bg-warning bg-opacity-10 text-warning-dark px-2 py-1 text-dark"><i class="fas fa-globe me-1"></i>Uganda</span></td>
+                  <td><strong>Shema – Kibingo</strong></td>
+                  <td>Western Region</td>
+                  <td class="text-end fw-bold text-primary-green">2</td>
+                </tr>
+
+                <!-- Tanzania -->
+                <tr class="locator-row" data-market="regional" data-country="tanzania">
+                  <td class="fw-bold">44</td>
+                  <td><span class="badge bg-info bg-opacity-10 text-info px-2 py-1"><i class="fas fa-globe me-1"></i>Tanzania</span></td>
+                  <td><strong>Rusumo</strong></td>
+                  <td>Kagera Region</td>
+                  <td class="text-end fw-bold text-primary-green">1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-5 bg-section text-center">
+      <div class="container-custom">
+        <h2 class="font-heading display-6 fw-bold mb-3">Interested in becoming a Principal Agent?</h2>
+        <p class="text-muted-custom fs-5 max-w-700 mx-auto mb-4">Read our recruitment requirements, fill out the application form, and start distributing Aura products in your territory.</p>
+        <a href="become-agent.html" class="btn-aura-primary">
+          <span>Apply to Onboard</span>
+          <i class="fas fa-file-contract"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-aura">
+    <div class="container-custom">
+      <div class="row gy-4 mb-5">
+        <div class="col-lg-4">
+          <img src="assets/images/logo.png" alt="Aura Soaps" class="footer-logo-img mb-3">
+          <p class="text-white-50 fs-7">Artisanal cold-processed natural soaps and organic skincare formulations.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="footer-title">Support</h5>
+          <ul class="footer-links">
+            <li><a href="become-agent.html">Apply Now</a></li>
+            <li><a href="agent-locator.html">Find Agent</a></li>
+            <li><a href="agent-portal.html">Agent Portal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="footer-title">Contact Us</h5>
+          <p class="text-white-50 fs-7 mb-2"><i class="fas fa-phone-alt me-2 text-aqua"></i> +250-795602083</p>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex justify-content-between text-white-50">
+        <div>&copy; 2026 Aura Soaps. All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Interactive Locator JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.getElementById("locatorSearch");
+      const countrySelect = document.getElementById("locatorCountry");
+      const rows = document.querySelectorAll(".locator-row");
+
+      function filterTable() {
+        const query = searchInput.value.toLowerCase().trim();
+        const countryVal = countrySelect.value;
+
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          const countryAttr = row.getAttribute("data-country");
+          const marketAttr = row.getAttribute("data-market");
+
+          let matchText = text.includes(query);
+          let matchCountry = false;
+
+          if (countryVal === "all") {
+            matchCountry = true;
+          } else if (countryVal === "rwanda" && marketAttr === "rwanda") {
+            matchCountry = true;
+          } else if (countryVal === "regional" && marketAttr === "regional") {
+            matchCountry = true;
+          } else if (countryVal === countryAttr) {
+            matchCountry = true;
+          }
+
+          if (matchText && matchCountry) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      }
+
+      searchInput.addEventListener("input", filterTable);
+      countrySelect.addEventListener("change", filterTable);
+    });
+  </script>
+</body>
+</html>
