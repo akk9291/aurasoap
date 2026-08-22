@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAgentManagementController;
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AgentController as AdminAgentController;
 use App\Http\Controllers\Admin\BlogPostController as AdminBlogPostController;
@@ -17,6 +18,17 @@ use App\Http\Controllers\Admin\SeoController as AdminSeoController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
 use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
+
+use App\Http\Controllers\Agent\AgentAuthController;
+use App\Http\Controllers\Agent\AgentClientController;
+use App\Http\Controllers\Agent\AgentDashboardController;
+use App\Http\Controllers\Agent\AgentDocumentController;
+use App\Http\Controllers\Agent\AgentEnquiryController;
+use App\Http\Controllers\Agent\AgentMarketingController;
+use App\Http\Controllers\Agent\AgentOrderController;
+use App\Http\Controllers\Agent\AgentProductController;
+use App\Http\Controllers\Agent\AgentProfileController;
+use App\Http\Controllers\Agent\AgentSupportController;
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -51,8 +63,11 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/become-a-distributor', [DistributorController::class, 'index'])->name('distributor');
 Route::post('/become-a-distributor', [DistributorController::class, 'store'])->name('distributor.store');
 
+Route::get('/become-an-agent', [AgentAuthController::class, 'showRegister'])->name('agent.register');
+Route::post('/become-an-agent', [AgentAuthController::class, 'register'])->name('agent.register.submit');
+
 Route::get('/agent-locator', [PageController::class, 'agentLocator'])->name('agent.locator');
-Route::get('/agent-portal', [PageController::class, 'agentPortal'])->name('agent.portal');
+Route::get('/agent-portal', fn() => redirect()->route('agent.login'))->name('agent.portal');
 
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
@@ -73,6 +88,70 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 Route::get('/robots.txt', [RobotsController::class, 'index'])->name('robots');
 
 Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
+
+/*
+|--------------------------------------------------------------------------
+| Principal Agent Portal Routes (/agent)
+|--------------------------------------------------------------------------
+*/
+Route::prefix('agent')->name('agent.')->group(function () {
+    // Agent Authentication
+    Route::get('/login', [AgentAuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AgentAuthController::class, 'login'])->middleware('throttle:6,1')->name('login.submit');
+    Route::post('/logout', [AgentAuthController::class, 'logout'])->name('logout');
+
+    Route::get('/register', [AgentAuthController::class, 'showRegister'])->name('register.direct');
+    Route::post('/register', [AgentAuthController::class, 'register'])->name('register.submit.direct');
+
+    Route::get('/forgot-password', [AgentAuthController::class, 'showForgotPassword'])->name('password.request');
+    Route::post('/forgot-password', [AgentAuthController::class, 'sendResetLinkEmail'])->middleware('throttle:6,1')->name('password.email');
+    Route::get('/reset-password/{token}', [AgentAuthController::class, 'showResetPassword'])->name('password.reset');
+    Route::post('/reset-password', [AgentAuthController::class, 'resetPassword'])->middleware('throttle:6,1')->name('password.update');
+
+    // Pending application review screen
+    Route::get('/application-status', [AgentAuthController::class, 'pendingStatus'])->name('pending-status');
+
+    // Protected Agent Portal (Approved Principal Agents Only)
+    Route::middleware(['auth', 'agent.auth'])->group(function () {
+        Route::get('/', [AgentDashboardController::class, 'index']);
+        Route::get('/dashboard', [AgentDashboardController::class, 'index'])->name('dashboard');
+
+        // Profile & Business Info
+        Route::get('/profile', [AgentProfileController::class, 'index'])->name('profile');
+        Route::post('/profile', [AgentProfileController::class, 'update'])->name('profile.update');
+        Route::get('/business', [AgentProfileController::class, 'business'])->name('business');
+        Route::post('/business/tender-request', [AgentProfileController::class, 'requestTenderPermission'])->name('business.tender-request');
+
+        // Product Catalog & Wholesale Pricing
+        Route::get('/products', [AgentProductController::class, 'index'])->name('products.index');
+        Route::get('/products/{product}', [AgentProductController::class, 'show'])->name('products.show');
+        Route::get('/wholesale-prices', [AgentProductController::class, 'wholesalePrices'])->name('wholesale-prices');
+
+        // Clients / Buyers CRM
+        Route::resource('clients', AgentClientController::class);
+
+        // Enquiries Management
+        Route::resource('enquiries', AgentEnquiryController::class)->except(['edit', 'update']);
+        Route::post('/enquiries/{enquiry}/status', [AgentEnquiryController::class, 'updateStatus'])->name('enquiries.update-status');
+
+        // Order Placement & Orders History
+        Route::resource('orders', AgentOrderController::class)->only(['index', 'create', 'store', 'show']);
+        Route::get('/orders/{order}/invoice', [AgentOrderController::class, 'invoice'])->name('orders.invoice');
+        Route::post('/orders/{order}/cancel', [AgentOrderController::class, 'cancel'])->name('orders.cancel');
+
+        // Marketing Materials
+        Route::get('/marketing', [AgentMarketingController::class, 'index'])->name('marketing.index');
+        Route::get('/marketing/{material}/download', [AgentMarketingController::class, 'download'])->name('marketing.download');
+
+        // Documents Vault
+        Route::get('/documents', [AgentDocumentController::class, 'index'])->name('documents.index');
+        Route::get('/documents/{type}/download', [AgentDocumentController::class, 'download'])->name('documents.download');
+
+        // Support Helpdesk
+        Route::resource('support', AgentSupportController::class)->only(['index', 'create', 'store', 'show']);
+        Route::post('/support/{ticket}/reply', [AgentSupportController::class, 'reply'])->name('support.reply');
+    });
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -109,8 +188,35 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::resource('agents', AdminAgentController::class)->except(['create', 'show', 'edit']);
         });
 
-        // Enquiries & Applications: Super Admin, Admin, Enquiry Manager
+        // Agent Portal Management & Enquiries: Super Admin, Admin, Enquiry Manager
         Route::middleware(['role:super-admin,admin,enquiry-manager'])->group(function () {
+            // Principal Agent Portal Management
+            Route::get('/agent-management', [AdminAgentManagementController::class, 'index'])->name('agent_management.index');
+            Route::get('/agent-management/{agent}', [AdminAgentManagementController::class, 'show'])->name('agent_management.show');
+            Route::post('/agent-management/{agent}/approve', [AdminAgentManagementController::class, 'approve'])->name('agent_management.approve');
+            Route::post('/agent-management/{agent}/reject', [AdminAgentManagementController::class, 'reject'])->name('agent_management.reject');
+            Route::post('/agent-management/{agent}/suspend', [AdminAgentManagementController::class, 'suspend'])->name('agent_management.suspend');
+            Route::post('/agent-management/{agent}/reactivate', [AdminAgentManagementController::class, 'reactivate'])->name('agent_management.reactivate');
+            Route::post('/agent-management/{agent}/tender-permission', [AdminAgentManagementController::class, 'updateTenderPermission'])->name('agent_management.tender_permission');
+            Route::post('/agent-management/{agent}/notes', [AdminAgentManagementController::class, 'updateNotes'])->name('agent_management.notes');
+            Route::get('/agent-management/{agent}/docs/{type}', [AdminAgentManagementController::class, 'downloadDoc'])->name('agent_management.doc_download');
+
+            // Agent Orders
+            Route::get('/agent-orders', [AdminAgentManagementController::class, 'orders'])->name('agent_management.orders');
+            Route::get('/agent-orders/{order}', [AdminAgentManagementController::class, 'showOrder'])->name('agent_management.orders.show');
+            Route::post('/agent-orders/{order}/status', [AdminAgentManagementController::class, 'updateOrderStatus'])->name('agent_management.orders.update_status');
+
+            // Marketing Materials CMS
+            Route::get('/agent-marketing', [AdminAgentManagementController::class, 'marketing'])->name('agent_management.marketing');
+            Route::post('/agent-marketing', [AdminAgentManagementController::class, 'storeMarketing'])->name('agent_management.marketing.store');
+            Route::delete('/agent-marketing/{material}', [AdminAgentManagementController::class, 'destroyMarketing'])->name('agent_management.marketing.destroy');
+
+            // Support Helpdesk
+            Route::get('/agent-support', [AdminAgentManagementController::class, 'support'])->name('agent_management.support');
+            Route::get('/agent-support/{ticket}', [AdminAgentManagementController::class, 'showSupport'])->name('agent_management.support.show');
+            Route::post('/agent-support/{ticket}/reply', [AdminAgentManagementController::class, 'replySupport'])->name('agent_management.support.reply');
+
+            // Public Website Distributor Applications & Contact Messages
             Route::get('/distributors', [AdminDistributorApplicationController::class, 'index'])->name('distributors.index');
             Route::get('/distributors/{distributor}', [AdminDistributorApplicationController::class, 'show'])->name('distributors.show');
             Route::post('/distributors/{distributor}/status', [AdminDistributorApplicationController::class, 'updateStatus'])->name('distributors.updateStatus');

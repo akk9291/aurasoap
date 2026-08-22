@@ -5,7 +5,7 @@
   <div class="container-custom text-center">
     <span class="badge-subtitle mb-2"><i class="fas fa-camera text-danger"></i> Artisanal Gallery</span>
     <h1 class="section-title">Behind The Botanical Craft</h1>
-    <p class="text-muted-custom max-w-700 mx-auto">Visual glimpses of our small-batch cold saponification process, organic ingredients, and handcrafted products.</p>
+    <p class="text-muted-custom max-w-700 mx-auto">Visual glimpses of our precision formulation process, natural organic ingredients, and crafted personal care & sanitation products.</p>
   </div>
 </section>
 

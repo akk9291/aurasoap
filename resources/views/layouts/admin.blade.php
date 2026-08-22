@@ -295,7 +295,25 @@
       @endif
 
       @if(auth()->user()->hasRole(['super-admin', 'admin', 'enquiry-manager']))
-        <div class="admin-nav-section-title">Enquiries & Agents</div>
+        <div class="admin-nav-section-title">Agent Portal Management</div>
+        <a href="{{ route('admin.agent_management.index') }}" class="admin-nav-link {{ request()->routeIs('admin.agent_management.index') || request()->routeIs('admin.agent_management.show') ? 'active' : '' }}">
+          <i class="fas fa-id-card-alt"></i>
+          <span>Agent Accounts</span>
+        </a>
+        <a href="{{ route('admin.agent_management.orders') }}" class="admin-nav-link {{ request()->routeIs('admin.agent_management.orders*') ? 'active' : '' }}">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <span>Agent Orders</span>
+        </a>
+        <a href="{{ route('admin.agent_management.marketing') }}" class="admin-nav-link {{ request()->routeIs('admin.agent_management.marketing*') ? 'active' : '' }}">
+          <i class="fas fa-bullhorn"></i>
+          <span>Agent Marketing CMS</span>
+        </a>
+        <a href="{{ route('admin.agent_management.support') }}" class="admin-nav-link {{ request()->routeIs('admin.agent_management.support*') ? 'active' : '' }}">
+          <i class="fas fa-headset"></i>
+          <span>Agent Support Desk</span>
+        </a>
+
+        <div class="admin-nav-section-title">Enquiries & Leads</div>
         <a href="{{ route('admin.distributors.index') }}" class="admin-nav-link {{ request()->routeIs('admin.distributors.*') ? 'active' : '' }}">
           <i class="fas fa-user-tie"></i>
           <span>Distributor Applications</span>

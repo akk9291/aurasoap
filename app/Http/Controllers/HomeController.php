@@ -20,7 +20,7 @@ class HomeController extends Controller
             $featuredProducts = Product::with('category')->where('status', 'published')->orderBy('sort_order')->take(6)->get();
         }
 
-        $categories = ProductCategory::where('is_active', true)->orderBy('sort_order')->take(4)->get();
+        $categories = ProductCategory::where('is_active', true)->orderBy('sort_order')->get();
         $featuredIngredients = Ingredient::where('status', true)->where('is_featured', true)->orderBy('sort_order')->take(3)->get();
         $processSteps = ProcessStep::where('status', true)->orderBy('sort_order')->get();
         $testimonials = Testimonial::where('status', true)->where('is_featured', true)->orderBy('sort_order')->get();

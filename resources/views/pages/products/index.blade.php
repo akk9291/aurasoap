@@ -3,9 +3,9 @@
 @section('content')
 <section class="py-5 bg-section pt-6">
   <div class="container-custom text-center">
-    <span class="badge-subtitle mb-2"><i class="fas fa-soap"></i> Organic Skincare</span>
-    <h1 class="section-title">Our Handcrafted Soap Collection</h1>
-    <p class="text-muted-custom max-w-700 mx-auto">Explore cold-processed organic soaps, exfoliating body bars, and pH-balanced facial bars.</p>
+    <span class="badge-subtitle mb-2"><i class="fas fa-boxes-stacked"></i> Personal Care & Sanitation</span>
+    <h1 class="section-title">Our Crafted Product Collection</h1>
+    <p class="text-muted-custom max-w-700 mx-auto">Explore our manufactured range of Bar Soaps (Laundry & Bath), Luxury Toilet Paper, Kitchen Paper Towels, and Antiperspirant Rollon Gel.</p>
   </div>
 </section>
 
@@ -13,7 +13,7 @@
   <div class="container-custom">
     <!-- Category Filter Bar -->
     <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
-      <a href="{{ route('products.index') }}" class="btn {{ !request('category') ? 'btn-aura-primary' : 'btn-aura-outline' }} rounded-pill px-4">All Soaps</a>
+      <a href="{{ route('products.index') }}" class="btn {{ !request('category') ? 'btn-aura-primary' : 'btn-aura-outline' }} rounded-pill px-4">All Products</a>
       @foreach($categories as $cat)
         <a href="{{ route('products.category', $cat->slug) }}" class="btn {{ (isset($category) && $category->id == $cat->id) || request('category') == $cat->slug ? 'btn-aura-primary' : 'btn-aura-outline' }} rounded-pill px-4">{{ $cat->name }}</a>
       @endforeach

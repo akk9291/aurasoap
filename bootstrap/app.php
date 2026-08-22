@@ -15,9 +15,15 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => \App\Http\Middleware\RoleMiddleware::class,
             'permission' => \App\Http\Middleware\PermissionMiddleware::class,
+            'agent.auth' => \App\Http\Middleware\AgentAuthMiddleware::class,
         ]);
         $middleware->appendToGroup('web', \App\Http\Middleware\RedirectHandlerMiddleware::class);
-        $middleware->redirectGuestsTo(fn () => route('admin.login'));
+        $middleware->redirectGuestsTo(function (Request $request) {
+            if ($request->is('agent') || $request->is('agent/*')) {
+                return route('agent.login');
+            }
+            return route('admin.login');
+        });
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

@@ -16,6 +16,10 @@ class RoleMiddleware
 
         $user = auth()->user();
 
+        if ($user->isAgent() && !$user->hasRole(['super-admin', 'admin', 'content-manager', 'seo-manager', 'enquiry-manager'])) {
+            abort(403, 'Unauthorized. Principal Agents are not permitted to access the Admin CMS.');
+        }
+
         if (empty($roles)) {
             return $next($request);
         }

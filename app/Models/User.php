@@ -61,4 +61,39 @@ class User extends Authenticatable implements FilamentUser
         }
         return false;
     }
+
+    public function agentProfile()
+    {
+        return $this->hasOne(AgentProfile::class);
+    }
+
+    public function agentClients()
+    {
+        return $this->hasMany(AgentClient::class);
+    }
+
+    public function agentOrders()
+    {
+        return $this->hasMany(AgentOrder::class);
+    }
+
+    public function agentEnquiries()
+    {
+        return $this->hasMany(AgentEnquiry::class);
+    }
+
+    public function agentTickets()
+    {
+        return $this->hasMany(AgentSupportTicket::class);
+    }
+
+    public function isAgent(): bool
+    {
+        return $this->hasRole('principal-agent') || $this->hasRole('agent');
+    }
+
+    public function isApprovedAgent(): bool
+    {
+        return $this->isAgent() && $this->agentProfile && $this->agentProfile->isApproved();
+    }
 }

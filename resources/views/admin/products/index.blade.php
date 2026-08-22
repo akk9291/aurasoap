@@ -6,7 +6,7 @@
 <div class="d-flex align-items-center justify-content-between mb-3">
   <div>
     <h5 class="fw-bold mb-0">Products Catalog</h5>
-    <p class="text-muted fs-7 mb-0">Manage handcrafted soap products, SKU, ingredients, and publishing status</p>
+    <p class="text-muted fs-7 mb-0">Manage crafted product lines (Bar Soaps, Toilet Paper, Kitchen Towel Paper, Antiperspirant Rollon Gel), SKU, pricing, and publishing status</p>
   </div>
   <a href="{{ route('admin.products.create') }}" class="btn btn-warning rounded-pill fw-bold text-dark px-3">
     <i class="fas fa-plus me-1"></i> Add New Product

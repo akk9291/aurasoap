@@ -10,7 +10,7 @@
       <div class="col-lg-6">
         <div class="hero-badge-wrap mb-3">
           <span class="badge-subtitle">
-            <i class="fas fa-seedling"></i> {{ App\Models\Setting::get('hero_badge', '100% Organic & Handcrafted') }}
+            <i class="fas fa-seedling"></i> {{ App\Models\Setting::get('hero_badge', 'Essential Personal Care & Sanitation') }}
           </span>
         </div>
         
@@ -19,7 +19,7 @@
         </h1>
         
         <p class="hero-desc">
-          {{ App\Models\Setting::get('hero_desc', 'Natural handcrafted soaps made with skin-loving ingredients that cleanse, nourish, and refresh every day. Experience luxury organic bathing rituals.') }}
+          {{ App\Models\Setting::get('hero_desc', 'Essential Personal Care, Sanitation, and Hygiene products. Premium crafted Bar Soaps (Laundry & Bath), Luxury Toilet Paper, Kitchen Towels, and Antiperspirant Rollon Gel.') }}
         </p>
         
         <div class="hero-btns d-flex flex-wrap gap-3">
@@ -40,7 +40,7 @@
             $heroPath = App\Models\Setting::get('hero_img', 'assets/images/aura-shop (5).jpeg');
             $heroImg = file_exists(public_path($heroPath)) ? asset($heroPath) : asset('assets/images/aura-shop (5).jpeg');
           @endphp
-          <img src="{{ $heroImg }}" alt="Aura Handcrafted Soap Lifestyle" class="hero-img-main img-fluid rounded-4 shadow-lg">
+          <img src="{{ $heroImg }}" alt="Aura Crafted Products Lifestyle" class="hero-img-main img-fluid rounded-4 shadow-lg">
           
           <!-- Floating Glass Badges -->
           <div class="floating-badge badge-hero-1">
