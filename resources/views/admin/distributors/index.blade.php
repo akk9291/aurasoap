@@ -57,8 +57,8 @@
       </table>
     </div>
 
-    <div class="pt-3">
-      {{ $applications->links() }}
+    <div class="mt-4">
+      {{ $applications->links('pagination::bootstrap-5') }}
     </div>
   @else
     <p class="text-muted text-center py-4 fs-7 mb-0">No distributor applications submitted yet.</p>

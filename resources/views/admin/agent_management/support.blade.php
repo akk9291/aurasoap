@@ -79,7 +79,7 @@
       </table>
     </div>
     <div class="mt-3">
-      {{ $tickets->links() }}
+      {{ $tickets->links('pagination::bootstrap-5') }}
     </div>
   @else
     <div class="text-center py-5">

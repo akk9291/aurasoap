@@ -103,7 +103,7 @@
     </div>
 
     <div class="pt-3">
-      {{ $products->links() }}
+      {{ $products->links('pagination::bootstrap-5') }}
     </div>
   @else
     <p class="text-muted text-center py-4 fs-7 mb-0">No products found matching your filter criteria.</p>

@@ -102,7 +102,7 @@
           </table>
         </div>
         <div class="mt-3">
-          {{ $materials->links() }}
+          {{ $materials->links('pagination::bootstrap-5') }}
         </div>
       @else
         <p class="text-muted fs-8 text-center my-4">No marketing assets uploaded yet.</p>

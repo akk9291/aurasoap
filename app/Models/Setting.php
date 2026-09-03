@@ -11,7 +11,14 @@ class Setting extends Model
     public static function get($key, $default = null)
     {
         $setting = static::where('key', $key)->first();
-        return $setting ? $setting->value : $default;
+        $val = $setting ? $setting->value : $default;
+
+        if (is_string($val)) {
+            $val = str_ireplace('hand-crafted', 'crafted', $val);
+            $val = str_ireplace('handcrafted', 'crafted', $val);
+        }
+
+        return $val;
     }
 
     public static function set($key, $value, $group = 'general', $type = 'text')

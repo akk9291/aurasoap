@@ -44,7 +44,7 @@
     </div>
 
     <div class="pt-3">
-      {{ $mediaFiles->links() }}
+      {{ $mediaFiles->links('pagination::bootstrap-5') }}
     </div>
   @else
     <p class="text-muted text-center py-4 fs-7 mb-0">No media files uploaded yet.</p>

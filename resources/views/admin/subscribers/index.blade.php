@@ -47,7 +47,7 @@
     </div>
 
     <div class="pt-3">
-      {{ $subscribers->links() }}
+      {{ $subscribers->links('pagination::bootstrap-5') }}
     </div>
   @else
     <p class="text-muted text-center py-4 fs-7 mb-0">No subscribers collected yet.</p>

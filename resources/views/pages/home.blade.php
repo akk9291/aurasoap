@@ -10,7 +10,7 @@
       <div class="col-lg-6">
         <div class="hero-badge-wrap mb-3">
           <span class="badge-subtitle">
-            <i class="fas fa-seedling"></i> {{ App\Models\Setting::get('hero_badge', 'Essential Personal Care & Sanitation') }}
+            <i class="fas fa-seedling"></i> {{ str_ireplace('handcrafted', 'crafted', App\Models\Setting::get('hero_badge', '100% Organic & Crafted')) }}
           </span>
         </div>
         
@@ -19,7 +19,7 @@
         </h1>
         
         <p class="hero-desc">
-          {{ App\Models\Setting::get('hero_desc', 'Essential Personal Care, Sanitation, and Hygiene products. Premium crafted Bar Soaps (Laundry & Bath), Luxury Toilet Paper, Kitchen Towels, and Antiperspirant Rollon Gel.') }}
+          {{ str_ireplace('handcrafted', 'crafted', App\Models\Setting::get('hero_desc', 'Natural crafted soaps made with skin-loving ingredients that cleanse, nourish, and refresh every day. Experience luxury organic bathing rituals.')) }}
         </p>
         
         <div class="hero-btns d-flex flex-wrap gap-3">

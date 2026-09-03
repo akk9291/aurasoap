@@ -135,7 +135,7 @@
       </table>
     </div>
     <div class="mt-3">
-      {{ $agents->links() }}
+      {{ $agents->links('pagination::bootstrap-5') }}
     </div>
   @else
     <div class="text-center py-5">

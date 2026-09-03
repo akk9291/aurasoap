@@ -231,8 +231,56 @@
       }
       .admin-wrapper {
         margin-left: 0;
-        padding: 1.25rem;
-      }
+    /* Pagination Safeguards & Clean UI */
+    nav[role="navigation"] svg,
+    .pagination svg,
+    svg.w-5,
+    svg.h-5,
+    div:has(> .pagination) svg {
+      width: 1.25rem !important;
+      height: 1.25rem !important;
+      max-width: 20px !important;
+      max-height: 20px !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
+
+    .pagination {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      margin-bottom: 0 !important;
+      list-style: none !important;
+      padding-left: 0 !important;
+    }
+
+    .pagination .page-item .page-link {
+      color: #1E293B;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px !important;
+      min-width: 36px;
+      height: 36px;
+      padding: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.88rem;
+      background: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .pagination .page-item.active .page-link {
+      background: #F59E0B !important;
+      border-color: #F59E0B !important;
+      color: #FFFFFF !important;
+    }
+
+    .pagination .page-item.disabled .page-link {
+      color: #94A3B8 !important;
+      background: #F8FAFC !important;
+      border-color: #E2E8F0 !important;
+      cursor: not-allowed;
     }
   </style>
   @stack('styles')

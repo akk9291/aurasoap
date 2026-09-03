@@ -34,8 +34,8 @@
       @endforeach
     </div>
 
-    <div class="pt-5 d-flex justify-content-center">
-      {{ $posts->links() }}
+    <div class="pt-4 d-flex justify-content-center">
+      {{ $posts->links('pagination::bootstrap-5') }}
     </div>
   </div>
 </section>

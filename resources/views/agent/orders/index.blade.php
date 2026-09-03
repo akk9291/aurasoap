@@ -106,7 +106,7 @@
       </table>
     </div>
     <div class="mt-3">
-      {{ $orders->links() }}
+      {{ $orders->links('pagination::bootstrap-5') }}
     </div>
   @else
     <div class="text-center py-5">

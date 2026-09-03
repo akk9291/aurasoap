@@ -160,7 +160,7 @@
   </div>
 
   <div class="p-3 border-top">
-    {{ $agents->links() }}
+    {{ $agents->links('pagination::bootstrap-5') }}
   </div>
 </div>
 
