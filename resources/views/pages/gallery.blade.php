@@ -1,13 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-5 bg-section pt-6">
-  <div class="container-custom text-center">
-    <span class="badge-subtitle mb-2"><i class="fas fa-camera text-danger"></i> Artisanal Gallery</span>
-    <h1 class="section-title">Behind The Botanical Craft</h1>
-    <p class="text-muted-custom max-w-700 mx-auto">Visual glimpses of our precision formulation process, natural organic ingredients, and crafted personal care & sanitation products.</p>
-  </div>
-</section>
+<main>
+  <!-- PAGE BANNER -->
+  <section class="page-banner text-center">
+    <div class="container-custom">
+      <nav class="breadcrumb-aura mb-3">
+        <a href="{{ route('home') }}">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Gallery</span>
+      </nav>
+      <h1 class="page-banner-title">Behind The Botanical Craft</h1>
+      <p class="page-banner-subtitle mx-auto">Visual glimpses of our precision formulation process, natural organic ingredients, and crafted personal care & sanitation products.</p>
+    </div>
+  </section>
 
 <section class="py-5">
   <div class="container-custom">
@@ -42,4 +48,5 @@
     </div>
   </div>
 </section>
+</main>
 @endsection

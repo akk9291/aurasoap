@@ -1,12 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-5 bg-section pt-6">
-  <div class="container-custom text-center">
-    <h1 class="section-title">Search Results</h1>
-    <p class="text-muted-custom">Showing results for: <strong>"{{ $q }}"</strong></p>
-  </div>
-</section>
+<main>
+  <!-- PAGE BANNER -->
+  <section class="page-banner text-center">
+    <div class="container-custom">
+      <nav class="breadcrumb-aura mb-3">
+        <a href="{{ route('home') }}">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Search Results</span>
+      </nav>
+      <h1 class="page-banner-title">Search Results</h1>
+      <p class="page-banner-subtitle mx-auto">Showing results for: <strong>"{{ $q }}"</strong></p>
+    </div>
+  </section>
 
 <section class="py-5">
   <div class="container-custom">
@@ -42,4 +49,5 @@
     @endif
   </div>
 </section>
+</main>
 @endsection

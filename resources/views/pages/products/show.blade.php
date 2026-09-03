@@ -3,12 +3,12 @@
 @section('content')
 <section class="py-5 pt-6">
   <div class="container-custom">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb fs-7">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('products.index') }}" class="text-decoration-none text-muted">Products</a></li>
-        <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">{{ $product->name }}</li>
-      </ol>
+    <nav class="breadcrumb-aura mb-4">
+      <a href="{{ route('home') }}">Home</a>
+      <span class="separator"><i class="fas fa-chevron-right"></i></span>
+      <a href="{{ route('products.index') }}">Products</a>
+      <span class="separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="current">{{ $product->name }}</span>
     </nav>
 
     <div class="row gy-5">

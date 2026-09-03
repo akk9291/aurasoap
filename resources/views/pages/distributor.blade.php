@@ -1,13 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-5 bg-section pt-6">
-  <div class="container-custom text-center">
-    <span class="badge-subtitle mb-2"><i class="fas fa-handshake text-warning"></i> Agent Recruitment</span>
-    <h1 class="section-title">Become a Principal Agent</h1>
-    <p class="text-muted-custom max-w-700 mx-auto">Join our authorized commercial distribution network across Rwanda and the Great Lakes Region. Receive protected territory quotas, wholesale margins, marketing support, and final destination logistics.</p>
-  </div>
-</section>
+<main>
+  <!-- PAGE BANNER -->
+  <section class="page-banner text-center">
+    <div class="container-custom">
+      <nav class="breadcrumb-aura mb-3">
+        <a href="{{ route('home') }}">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Become an Agent</span>
+      </nav>
+      <h1 class="page-banner-title">Become a Principal Agent</h1>
+      <p class="page-banner-subtitle mx-auto">Join our authorized commercial distribution network across Rwanda and the Great Lakes Region. Receive protected territory quotas, wholesale margins, marketing support, and final destination logistics.</p>
+    </div>
+  </section>
 
 <section class="py-5">
   <div class="container-custom max-w-900">
@@ -128,4 +134,5 @@
     </div>
   </div>
 </section>
+</main>
 @endsection

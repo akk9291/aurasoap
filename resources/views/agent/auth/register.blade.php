@@ -8,9 +8,18 @@
       
       <!-- Application Header Banner -->
       <div class="text-center mb-5">
-        <span class="badge bg-warning bg-opacity-20 text-dark border border-warning px-3 py-1.5 rounded-pill fw-bold fs-7 mb-2">
-          <i class="fas fa-handshake me-1 text-warning"></i> OFFICIAL APPLICATION
-        </span>
+        <nav class="breadcrumb-aura mb-3">
+          <a href="{{ route('home') }}">Home</a>
+          <span class="separator"><i class="fas fa-chevron-right"></i></span>
+          <a href="{{ route('distributor') }}">Become an Agent</a>
+          <span class="separator"><i class="fas fa-chevron-right"></i></span>
+          <span class="current">Agent Application</span>
+        </nav>
+        <div>
+          <span class="badge bg-warning bg-opacity-20 text-dark border border-warning px-3 py-1.5 rounded-pill fw-bold fs-7 mb-2">
+            <i class="fas fa-handshake me-1 text-warning"></i> OFFICIAL APPLICATION
+          </span>
+        </div>
         <h1 class="font-heading display-6 fw-bold text-dark mb-2">Apply to Become an Aura Soaps Principal Agent</h1>
         <p class="text-muted fs-6 max-w-700 mx-auto">
           Join our growing regional network of authorized Principal Agents. Distribute premium cold-process and artisan laundry, bath, and botanical beauty soaps with exclusive wholesale pricing and marketing support.

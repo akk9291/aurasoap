@@ -282,6 +282,12 @@
       border-color: #E2E8F0 !important;
       cursor: not-allowed;
     }
+
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      border-color: #F59E0B !important;
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2) !important;
+    }
   </style>
   @stack('styles')
 </head>

@@ -3,6 +3,13 @@
 @section('content')
 <section class="py-5 pt-6">
   <div class="container-custom max-w-900">
+    <nav class="breadcrumb-aura mb-4">
+      <a href="{{ route('home') }}">Home</a>
+      <span class="separator"><i class="fas fa-chevron-right"></i></span>
+      <a href="{{ route('blog.index') }}">Blog</a>
+      <span class="separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="current">{{ Str::limit($post->title, 40) }}</span>
+    </nav>
     <span class="badge bg-amber text-white px-3 py-2 rounded-pill fs-8 fw-bold mb-3 d-inline-block">{{ $post->category ? $post->category->name : 'Skincare' }}</span>
     <h1 class="font-heading section-title mb-3">{{ $post->title }}</h1>
     <div class="d-flex align-items-center gap-3 text-muted fs-7 mb-4 border-bottom pb-3">

@@ -38,7 +38,8 @@ class ProductController extends Controller
     {
         $categories = ProductCategory::where('is_active', true)->get();
         $ingredients = Ingredient::where('status', true)->get();
-        return view('admin.products.create', compact('categories', 'ingredients'));
+        $galleryImages = $this->getAvailableImages();
+        return view('admin.products.create', compact('categories', 'ingredients', 'galleryImages'));
     }
 
     public function store(Request $request)
@@ -51,6 +52,7 @@ class ProductController extends Controller
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'product_image' => 'nullable|string',
+            'product_image_file' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
             'benefits' => 'nullable|string',
             'usage_instructions' => 'nullable|string',
             'weight' => 'nullable|string',
@@ -63,6 +65,17 @@ class ProductController extends Controller
 
         $validated['slug'] = $validated['slug'] ? Str::slug($validated['slug']) : Str::slug($validated['name']);
         $validated['is_featured'] = $request->has('is_featured');
+
+        if ($request->hasFile('product_image_file')) {
+            $file = $request->file('product_image_file');
+            $dir = public_path('assets/images/products');
+            if (!file_exists($dir)) {
+                mkdir($dir, 0777, true);
+            }
+            $filename = 'product_' . time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move($dir, $filename);
+            $validated['product_image'] = 'assets/images/products/' . $filename;
+        }
 
         $product = Product::create($validated);
 
@@ -77,7 +90,8 @@ class ProductController extends Controller
     {
         $categories = ProductCategory::all();
         $ingredients = Ingredient::all();
-        return view('admin.products.edit', compact('product', 'categories', 'ingredients'));
+        $galleryImages = $this->getAvailableImages();
+        return view('admin.products.edit', compact('product', 'categories', 'ingredients', 'galleryImages'));
     }
 
     public function update(Request $request, Product $product)
@@ -90,6 +104,7 @@ class ProductController extends Controller
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'product_image' => 'nullable|string',
+            'product_image_file' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
             'benefits' => 'nullable|string',
             'usage_instructions' => 'nullable|string',
             'weight' => 'nullable|string',
@@ -101,6 +116,18 @@ class ProductController extends Controller
         ]);
 
         $validated['is_featured'] = $request->has('is_featured');
+
+        if ($request->hasFile('product_image_file')) {
+            $file = $request->file('product_image_file');
+            $dir = public_path('assets/images/products');
+            if (!file_exists($dir)) {
+                mkdir($dir, 0777, true);
+            }
+            $filename = 'product_' . time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move($dir, $filename);
+            $validated['product_image'] = 'assets/images/products/' . $filename;
+        }
+
         $product->update($validated);
 
         if ($request->has('ingredients')) {
@@ -110,6 +137,47 @@ class ProductController extends Controller
         }
 
         return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
+    }
+
+    public function getAvailableImages(): array
+    {
+        $images = [];
+
+        // 1. Check aurasoap images
+        $auraDir = public_path('assets/images/aurasoap images');
+        if (is_dir($auraDir)) {
+            $files = scandir($auraDir);
+            foreach ($files as $file) {
+                if (in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png', 'webp', 'gif'])) {
+                    $images[] = 'assets/images/aurasoap images/' . $file;
+                }
+            }
+        }
+
+        // 2. Check uploaded products images
+        $prodDir = public_path('assets/images/products');
+        if (is_dir($prodDir)) {
+            $files = scandir($prodDir);
+            foreach ($files as $file) {
+                if (in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png', 'webp', 'gif'])) {
+                    $images[] = 'assets/images/products/' . $file;
+                }
+            }
+        }
+
+        // 3. Check Media library
+        try {
+            $mediaPaths = \App\Models\Media::pluck('file_path')->toArray();
+            foreach ($mediaPaths as $mp) {
+                if (!in_array($mp, $images) && file_exists(public_path($mp))) {
+                    $images[] = $mp;
+                }
+            }
+        } catch (\Exception $e) {
+            // ignore if table not present
+        }
+
+        return $images;
     }
 
     public function destroy(Product $product)
