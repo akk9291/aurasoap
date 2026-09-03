@@ -21,7 +21,7 @@
       <div class="row align-items-center gy-5">
         <div class="col-lg-6" data-aos="fade-right">
           <div class="about-img-frame">
-            <img src="{{ asset(App\Models\Setting::get('about_story_image', 'assets/images/aura-shop (5).jpeg')) }}" alt="Aura Soaps Manufacturing" class="about-img shadow-lg rounded-4 w-100">
+            <img src="{{ asset(App\Models\Setting::get('about_story_image', 'assets/images/aurasoap images/aurashop (10).jpeg')) }}" alt="Aura Soaps Manufacturing" class="about-img shadow-lg rounded-4 w-100">
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
@@ -116,11 +116,11 @@
         <div class="col-lg-6" data-aos="fade-left">
           <div class="row g-3">
             <div class="col-6">
-              <img src="{{ asset('assets/images/aura-shop (6).jpeg') }}" alt="Artisanal Soap Mold" class="img-fluid rounded-4 shadow mb-3">
-              <img src="{{ asset('assets/images/aura-shop (7).jpeg') }}" alt="Essential Oil Infusion" class="img-fluid rounded-4 shadow">
+              <img src="{{ asset('assets/images/aurasoap images/aurashop (20).jpeg') }}" alt="Artisanal Soap Collection" class="img-fluid rounded-4 shadow mb-3">
+              <img src="{{ asset('assets/images/aurasoap images/aurashop (18).jpeg') }}" alt="Aura Shea Butter Soap" class="img-fluid rounded-4 shadow">
             </div>
             <div class="col-6 pt-4">
-              <img src="{{ asset('assets/images/aura-shop (8).jpeg') }}" alt="Cured Soap Stacks" class="img-fluid rounded-4 shadow">
+              <img src="{{ asset('assets/images/aurasoap images/aurashop (8).jpeg') }}" alt="Cured Soap Stacks" class="img-fluid rounded-4 shadow">
             </div>
           </div>
         </div>

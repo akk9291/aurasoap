@@ -54,7 +54,7 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center gap-2">
-                      <img src="{{ asset($c->image ?: 'assets/images/cat_bar_soaps.jpg') }}" alt="{{ $c->name }}" style="width: 36px; height: 36px; object-fit: cover; border-radius: 6px;">
+                      <img src="{{ asset($c->image ?: 'assets/images/aurasoap images/aurashop (20).jpeg') }}" alt="{{ $c->name }}" style="width: 36px; height: 36px; object-fit: cover; border-radius: 6px;">
                       <span class="fw-bold text-dark">{{ $c->name }}</span>
                     </div>
                   </td>

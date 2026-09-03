@@ -37,8 +37,8 @@
       <div class="col-lg-6">
         <div class="hero-img-wrapper text-center">
           @php
-            $heroPath = App\Models\Setting::get('hero_img', 'assets/images/aura-shop (5).jpeg');
-            $heroImg = file_exists(public_path($heroPath)) ? asset($heroPath) : asset('assets/images/aura-shop (5).jpeg');
+            $heroPath = App\Models\Setting::get('hero_img', 'assets/images/aurasoap images/aurashop (5).jpeg');
+            $heroImg = file_exists(public_path($heroPath)) ? asset($heroPath) : asset('assets/images/aurasoap images/aurashop (5).jpeg');
           @endphp
           <img src="{{ $heroImg }}" alt="Aura Crafted Products Lifestyle" class="hero-img-main img-fluid rounded-4 shadow-lg">
           
@@ -78,8 +78,8 @@
       <div class="col-lg-6" data-aos="fade-right">
         <div class="about-img-frame">
           @php
-            $storyPath = App\Models\Setting::get('about_story_image', 'assets/images/about_artisan.jpg');
-            $storyImg = file_exists(public_path($storyPath)) ? asset($storyPath) : asset('assets/images/about_artisan.jpg');
+            $storyPath = App\Models\Setting::get('about_story_image', 'assets/images/aurasoap images/aurashop (10).jpeg');
+            $storyImg = file_exists(public_path($storyPath)) ? asset($storyPath) : asset('assets/images/aurasoap images/aurashop (10).jpeg');
           @endphp
           <img src="{{ $storyImg }}" alt="Aura Soap Artisans Crafting Natural Soaps" class="about-img rounded-4 shadow">
         </div>
@@ -168,7 +168,7 @@
         @php
           $catImage = !empty($cat->image) && file_exists(public_path($cat->image)) 
             ? asset($cat->image) 
-            : asset('assets/images/beauty_soap.jpg');
+            : asset('assets/images/aurasoap images/aurashop (20).jpeg');
         @endphp
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
           <a href="{{ route('products.category', $cat->slug) }}" class="text-decoration-none d-block">
@@ -207,7 +207,7 @@
         @php
           $prodImg = !empty($product->product_image) && file_exists(public_path($product->product_image)) 
             ? asset($product->product_image) 
-            : asset('assets/images/beauty_soap.jpg');
+            : asset('assets/images/aurasoap images/aurashop (18).jpeg');
         @endphp
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
           <div class="product-card bg-white rounded-4 border shadow-sm p-3 h-100 d-flex flex-column">
@@ -334,7 +334,7 @@
       <div class="col-lg-7" data-aos="fade-left">
         <div class="row g-3">
           <div class="col-sm-6">
-            <img src="{{ asset('assets/images/about_artisan.jpg') }}" alt="Organic Ingredients" class="img-fluid rounded-4 shadow mb-3">
+            <img src="{{ asset('assets/images/aurasoap images/aurashop (15).jpeg') }}" alt="Organic Ingredients" class="img-fluid rounded-4 shadow mb-3">
           </div>
           <div class="col-sm-6">
             <div class="glass-card p-4 text-center border bg-white rounded-4 shadow-sm">
@@ -519,7 +519,7 @@
         @php
           $postImg = !empty($post->featured_image) && file_exists(public_path($post->featured_image)) 
             ? asset($post->featured_image) 
-            : asset('assets/images/herbal_soap.jpg');
+            : asset('assets/images/aurasoap images/aurashop (20).jpeg');
         @endphp
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
           <div class="blog-card bg-white rounded-4 border shadow-sm overflow-hidden h-100 d-flex flex-column">

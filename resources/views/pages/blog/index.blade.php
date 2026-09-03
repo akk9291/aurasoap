@@ -15,7 +15,7 @@
       @foreach($posts as $post)
         <div class="col-lg-4 col-md-6">
           <div class="card product-card-aura border-0 h-100">
-            <img src="{{ asset($post->featured_image ?: 'assets/images/blog_1.jpg') }}" alt="{{ $post->title }}" class="card-img-top" style="height: 220px; object-fit: cover;">
+            <img src="{{ asset($post->featured_image ?: 'assets/images/aurasoap images/aurashop (20).jpeg') }}" alt="{{ $post->title }}" class="card-img-top" style="height: 220px; object-fit: cover;">
             <div class="card-body p-4 d-flex flex-column justify-content-between">
               <div>
                 <div class="text-amber fs-8 fw-bold text-uppercase mb-1">{{ $post->category ? $post->category->name : 'Skincare' }}</div>

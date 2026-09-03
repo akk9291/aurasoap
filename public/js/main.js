@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 1b. Initialize Bootstrap Tooltips
+  if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  }
+
   // 2. Sticky Header Handler
   const navbar = document.getElementById('mainNavbar');
   const handleScroll = () => {

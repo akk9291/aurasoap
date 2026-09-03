@@ -253,13 +253,13 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   left: 0;
   right: 0;
   z-index: 1050;
-  padding: 1.25rem 0;
+  padding: 1.1rem 0;
   transition: all 0.4s ease;
   background: transparent;
 }
 
 .navbar-aura.scrolled {
-  padding: 0.75rem 0;
+  padding: 0.65rem 0;
   background: rgba(255, 248, 239, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -275,12 +275,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .brand-logo-img {
-  height: 54px;
-  max-width: 240px;
+  height: 80px;
+  max-width: 320px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(229, 138, 0, 0.15));
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.navbar-aura.scrolled .brand-logo-img {
+  height: 62px;
 }
 
 .brand-logo-img:hover {
@@ -288,13 +292,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .footer-logo-img {
-  height: 58px;
-  max-width: 250px;
+  height: 72px;
+  max-width: 300px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.15));
-  background: rgba(255, 255, 255, 0.96);
-  padding: 8px 18px;
+  padding: 6px 14px;
   border-radius: var(--radius-md);
   transition: transform 0.3s ease;
 }
@@ -321,10 +324,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .nav-link-aura {
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   font-weight: 600;
   color: var(--dark-text);
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 0.85rem !important;
   transition: var(--transition-fast);
   position: relative;
 }
@@ -352,6 +355,47 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .nav-link-aura:hover::after, .nav-link-aura.active::after {
   width: 60%;
+}
+
+/* Agent Portal User Icon Button */
+.btn-aura-user-portal {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--secondary-orange);
+  border: 1.5px solid rgba(229, 138, 0, 0.3);
+  font-size: 1.25rem;
+  box-shadow: 0 4px 14px rgba(229, 138, 0, 0.12);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.btn-aura-user-portal:hover {
+  background: var(--gradient-cta);
+  color: var(--white);
+  border-color: var(--primary-orange);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 22px rgba(229, 138, 0, 0.35);
+}
+
+.btn-aura-user-portal.active {
+  background: var(--secondary-orange);
+  color: var(--white);
+  border-color: var(--secondary-orange);
+}
+
+.btn-aura-user-portal-sm {
+  width: 38px;
+  height: 38px;
+  font-size: 1.1rem;
 }
 
 .navbar-toggler-aura {
@@ -1155,11 +1199,35 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Footer */
 .footer-aura {
-  background: #1A1A1A;
-  color: rgba(255, 255, 255, 0.85);
+  background: #111827;
+  color: rgba(255, 255, 255, 0.9);
   padding-top: 5rem;
   padding-bottom: 2rem;
   border-top: 4px solid var(--primary-orange);
+}
+
+.footer-aura h5,
+.footer-aura .font-heading {
+  color: #FFFFFF !important;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.footer-aura p,
+.footer-aura .text-muted-custom {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.footer-aura a.text-dark {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-aura a.text-dark:hover {
+  color: var(--primary-orange) !important;
+}
+
+.footer-aura strong {
+  color: #FFFFFF !important;
 }
 
 .footer-brand-name {
@@ -1186,14 +1254,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85) !important;
   text-decoration: none;
   transition: var(--transition-fast);
   font-size: 0.93rem;
 }
 
 .footer-links a:hover {
-  color: var(--primary-orange);
+  color: var(--primary-orange) !important;
   padding-left: 5px;
 }
 
@@ -1214,6 +1282,29 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: var(--primary-orange);
   color: var(--white);
   transform: translateY(-3px);
+}
+
+.social-icon-pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.social-icon-pill:hover {
+  background: var(--primary-orange);
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  border-color: var(--primary-orange);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.45);
 }
 
 .footer-bottom {
@@ -1640,8 +1731,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   .mt-6 {
     margin-top: 3.5rem !important;
   }
-  .mb-6 {
-    margin-bottom: 3.5rem !important;
+  .brand-logo-img {
+    height: 56px;
+    max-width: 230px;
   }
 }
 
@@ -1657,6 +1749,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     padding-top: 2.75rem !important;
     padding-bottom: 2.75rem !important;
   }
+  .brand-logo-img {
+    height: 48px;
+    max-width: 200px;
+  }
 }
+
 
 

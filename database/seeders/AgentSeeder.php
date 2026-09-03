@@ -143,6 +143,11 @@ class AgentSeeder extends Seeder
             $agentUser->roles()->attach($agentRole->id);
         }
 
+        $superRole = Role::where('slug', 'super-admin')->first();
+        if ($superRole && !$agentUser->hasRole('super-admin')) {
+            $agentUser->roles()->attach($superRole->id);
+        }
+
         $agentProfile = AgentProfile::firstOrCreate(
             ['user_id' => $agentUser->id],
             [

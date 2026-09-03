@@ -16,7 +16,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="card product-card-aura border-0 h-100">
               <div class="product-img-box position-relative overflow-hidden">
-                <img src="{{ asset($p->product_image ?: 'assets/images/prod_honey.jpg') }}" alt="{{ $p->name }}" class="card-img-top product-img">
+                <img src="{{ asset($p->product_image ?: 'assets/images/aurasoap images/aurashop (18).jpeg') }}" alt="{{ $p->name }}" class="card-img-top product-img">
               </div>
               <div class="card-body p-4 d-flex flex-column justify-content-between">
                 <div>

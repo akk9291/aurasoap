@@ -10,7 +10,7 @@
       <div><i class="fas fa-calendar-alt me-1 text-amber"></i> {{ $post->publish_date ? $post->publish_date->format('F d, Y') : $post->created_at->format('F d, Y') }}</div>
     </div>
 
-    <img src="{{ asset($post->featured_image ?: 'assets/images/blog_1.jpg') }}" alt="{{ $post->title }}" class="img-fluid rounded-xl w-100 mb-5 shadow">
+    <img src="{{ asset($post->featured_image ?: 'assets/images/aurasoap images/aurashop (20).jpeg') }}" alt="{{ $post->title }}" class="img-fluid rounded-xl w-100 mb-5 shadow">
 
     <div class="blog-content fs-6 text-muted-custom line-height-lg mb-5">
       {!! $post->content !!}

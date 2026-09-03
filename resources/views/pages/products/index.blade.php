@@ -26,7 +26,7 @@
           <div class="card product-card-aura border-0 h-100">
             <div class="product-img-box position-relative overflow-hidden">
               @php
-                $pImg = !empty($p->product_image) && file_exists(public_path($p->product_image)) ? asset($p->product_image) : asset('assets/images/beauty_soap.jpg');
+                $pImg = !empty($p->product_image) && file_exists(public_path($p->product_image)) ? asset($p->product_image) : asset('assets/images/aurasoap images/aurashop (18).jpeg');
               @endphp
               <img src="{{ $pImg }}" alt="{{ $p->name }}" class="card-img-top product-img">
               <span class="badge bg-amber position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill fs-8 fw-bold">100% Organic</span>

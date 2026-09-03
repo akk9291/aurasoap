@@ -23,37 +23,37 @@ class CmsContentSeeder extends Seeder
         $cat1 = ProductCategory::firstOrCreate(['slug' => 'organic-bar-soaps'], [
             'name' => 'Organic Bar Soaps',
             'description' => 'Cold-processed artisanal soap bars packed with organic botanical oils.',
-            'image' => 'assets/images/beauty_soap.jpg',
+            'image' => 'assets/images/aurasoap images/aurashop (20).jpeg',
             'icon' => 'fa-soap',
             'sort_order' => 1,
             'is_active' => true,
         ]);
-        $cat1->update(['image' => 'assets/images/beauty_soap.jpg']);
+        $cat1->update(['image' => 'assets/images/aurasoap images/aurashop (20).jpeg']);
 
         $cat2 = ProductCategory::firstOrCreate(['slug' => 'exfoliating-body-scrubs'], [
             'name' => 'Exfoliating Body Scrubs',
             'description' => 'Gentle seed and herbal scrubs to reveal soft, radiant skin.',
-            'image' => 'assets/images/herbal_soap.jpg',
+            'image' => 'assets/images/aurasoap images/aurashop (15).jpeg',
             'icon' => 'fa-sparkles',
             'sort_order' => 2,
             'is_active' => true,
         ]);
-        $cat2->update(['image' => 'assets/images/herbal_soap.jpg']);
+        $cat2->update(['image' => 'assets/images/aurasoap images/aurashop (15).jpeg']);
 
         $cat3 = ProductCategory::firstOrCreate(['slug' => 'facial-cleansing-bars'], [
             'name' => 'Facial Cleansing Bars',
             'description' => 'Mild pH-balanced botanical bars tailored for delicate facial skin.',
-            'image' => 'assets/images/moisturizing_soap.jpg',
+            'image' => 'assets/images/aurasoap images/aurashop (18).jpeg',
             'icon' => 'fa-spa',
             'sort_order' => 3,
             'is_active' => true,
         ]);
-        $cat3->update(['image' => 'assets/images/moisturizing_soap.jpg']);
+        $cat3->update(['image' => 'assets/images/aurasoap images/aurashop (18).jpeg']);
 
         // 2. Ingredients
         $ing1 = Ingredient::firstOrCreate(['slug' => 'cold-pressed-virgin-olive-oil'], [
             'name' => 'Cold-Pressed Virgin Olive Oil',
-            'image' => 'assets/images/beauty_soap.jpg',
+            'image' => 'assets/images/aurasoap images/aurashop (21).jpeg',
             'short_description' => 'Rich in polyphenols and vitamin E to nourish skin lipid barriers deeply.',
             'full_description' => 'Our organic virgin olive oil is cold-pressed from Mediterranean groves, delivering dense hydration without clogging pores.',
             'benefits' => 'Deep moisture, Antioxidant shield, Smooth texture',
@@ -61,11 +61,11 @@ class CmsContentSeeder extends Seeder
             'status' => true,
             'sort_order' => 1,
         ]);
-        $ing1->update(['image' => 'assets/images/beauty_soap.jpg']);
+        $ing1->update(['image' => 'assets/images/aurasoap images/aurashop (21).jpeg']);
 
         $ing2 = Ingredient::firstOrCreate(['slug' => 'raw-unrefined-shea-butter'], [
             'name' => 'Raw Unrefined Shea Butter',
-            'image' => 'assets/images/ing_shea.jpg',
+            'image' => 'assets/images/aurasoap images/aurashop (18).jpeg',
             'short_description' => 'Ethically harvested African shea butter for velvety soft skin protection.',
             'full_description' => 'Fair-trade wild shea butter provides concentrated fatty acids and essential vitamins to restore skin elasticity.',
             'benefits' => 'Restores moisture, Soothes redness, Calms dry patches',
@@ -76,7 +76,7 @@ class CmsContentSeeder extends Seeder
 
         $ing3 = Ingredient::firstOrCreate(['slug' => 'lavender-tea-tree-oil'], [
             'name' => 'Lavender & Tea Tree Oil',
-            'image' => 'assets/images/ing_lavender.jpg',
+            'image' => 'assets/images/aurasoap images/aurashop (4).jpeg',
             'short_description' => 'Calming French lavender combined with clarifying Australian tea tree.',
             'full_description' => 'Pure therapeutic grade essential oils provide natural antimicrobial power alongside a soothing floral aroma.',
             'benefits' => 'Clarifies pores, Calms senses, Natural antibacterial',
@@ -92,8 +92,8 @@ class CmsContentSeeder extends Seeder
             'sku' => 'AURA-HONEY-01',
             'short_description' => 'Soothing raw wild honey and ground colloidal oats to calm and hydrate dry skin.',
             'description' => 'Formulated for dry and sensitive skin, this creamy bar combines raw wildflower honey with ground organic oats. Gently removes impurities while providing deep humectant moisture.',
-            'product_image' => 'assets/images/prod_honey.jpg',
-            'gallery' => ['assets/images/prod_honey.jpg', 'assets/images/about_artisan.jpg'],
+            'product_image' => 'assets/images/aurasoap images/aurashop (21).jpeg',
+            'gallery' => ['assets/images/aurasoap images/aurashop (21).jpeg', 'assets/images/aurasoap images/aurashop (8).jpeg'],
             'benefits' => 'Soothes inflammation, Provides natural humectant hydration, Mild natural fragrance.',
             'usage_instructions' => 'Lather with warm water over moist skin. Massage gently and rinse thoroughly.',
             'weight' => '125g / 4.4 oz',
@@ -111,8 +111,8 @@ class CmsContentSeeder extends Seeder
             'sku' => 'AURA-LAV-02',
             'short_description' => 'French lavender essential oil combined with French pink clay and raw shea butter.',
             'description' => 'Unwind after a long day with this calming aromatherapy soap. French pink clay draws out micro-pollutants while shea butter restores skin smoothness.',
-            'product_image' => 'assets/images/prod_lavender.jpg',
-            'gallery' => ['assets/images/prod_lavender.jpg'],
+            'product_image' => 'assets/images/aurasoap images/aurashop (20).jpeg',
+            'gallery' => ['assets/images/aurasoap images/aurashop (20).jpeg', 'assets/images/aurasoap images/aurashop (18).jpeg'],
             'benefits' => 'Relieves daily stress, Purifies pores, Rich velvety lather.',
             'usage_instructions' => 'Use daily during bath or shower. Ideal for evening relaxation.',
             'weight' => '130g / 4.5 oz',
@@ -130,8 +130,8 @@ class CmsContentSeeder extends Seeder
             'sku' => 'AURA-CHAR-03',
             'short_description' => 'Deep pore cleansing bar infused with steam-activated coconut charcoal.',
             'description' => 'Target excess oil and blemish-prone skin naturally. Activated coconut charcoal acts like a magnet for impurities while tea tree essential oil keeps skin clear and fresh.',
-            'product_image' => 'assets/images/prod_charcoal.jpg',
-            'gallery' => ['assets/images/prod_charcoal.jpg'],
+            'product_image' => 'assets/images/aurasoap images/aurashop (12).jpeg',
+            'gallery' => ['assets/images/aurasoap images/aurashop (12).jpeg', 'assets/images/aurasoap images/aurashop (15).jpeg'],
             'benefits' => 'Balances oily skin, Prevents breakouts, Non-drying formula.',
             'usage_instructions' => 'Lather on wet face or body twice daily. Avoid eye contact.',
             'weight' => '120g / 4.2 oz',
@@ -178,7 +178,7 @@ class CmsContentSeeder extends Seeder
             'category_id' => $bCat->id,
             'author_id' => $adminUser ? $adminUser->id : null,
             'title' => 'Why Cold-Processed Soap is Superior for Your Skin Barrier',
-            'featured_image' => 'assets/images/blog_1.jpg',
+            'featured_image' => 'assets/images/aurasoap images/aurashop (20).jpeg',
             'excerpt' => 'Discover how natural glycerin and unheated botanical oils protect your skin moisture barrier compared to industrial synthetic detergents.',
             'content' => '<p>Industrial soap bars frequently extract natural glycerin to sell separately in moisturizing lotions. At Aura Soaps, our artisanal cold-process method retains 100% of organic glycerin...</p>',
             'tags' => 'cold process, skin barrier, natural soap',

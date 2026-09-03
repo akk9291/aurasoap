@@ -53,7 +53,7 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center gap-2">
-                      <img src="{{ asset($ing->image ?: 'assets/images/ing_shea.jpg') }}" alt="{{ $ing->name }}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 8px;">
+                      <img src="{{ asset($ing->image ?: 'assets/images/aurasoap images/aurashop (18).jpeg') }}" alt="{{ $ing->name }}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 8px;">
                       <div>
                         <div class="fw-bold text-dark">{{ $ing->name }}</div>
                         <div class="text-muted fs-8">{{ Str::limit($ing->short_description, 45) }}</div>
