@@ -11,7 +11,7 @@ class SeoService
     public static function getMeta($pageRoute = null, $model = null)
     {
         $siteName = Setting::get('site_name', 'Aura Soaps');
-        $defaultDesc = Setting::get('site_description', 'Aura Soaps offers handcrafted organic cold-processed soaps and eco-friendly skincare.');
+        $defaultDesc = Setting::get('site_description', 'Aura Soaps offers crafted organic cold-processed soaps and eco-friendly skincare.');
 
         $title = $siteName . ' | Natural Care • Pure Touch';
         $description = $defaultDesc;

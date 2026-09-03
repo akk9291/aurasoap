@@ -15,7 +15,7 @@ class SettingSeeder extends Seeder
             ['key' => 'site_tagline', 'value' => 'Natural Care • Pure Touch', 'group' => 'general'],
             ['key' => 'site_logo', 'value' => 'assets/images/logo.png', 'group' => 'general'],
             ['key' => 'site_favicon', 'value' => 'assets/images/logo.png', 'group' => 'general'],
-            ['key' => 'site_description', 'value' => 'Aura Soaps offers handcrafted natural soaps and eco-friendly skincare made with skin-loving organic botanicals, shea butter, and essential oils.', 'group' => 'general'],
+            ['key' => 'site_description', 'value' => 'Aura Soaps offers crafted natural soaps and eco-friendly skincare made with skin-loving organic botanicals, shea butter, and essential oils.', 'group' => 'general'],
             
             // Contact & Business Information
             ['key' => 'contact_email', 'value' => 'hello@aurasoaps.com', 'group' => 'contact'],

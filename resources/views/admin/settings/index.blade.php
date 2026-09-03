@@ -112,7 +112,7 @@
 
             <div class="mb-3">
               <label class="form-label fs-7 fw-bold">Global Description</label>
-              <textarea name="site_description" class="form-control" rows="3">{{ $settings['site_description'] ?? 'Aura Soaps offers handcrafted natural soaps and eco-friendly skincare.' }}</textarea>
+              <textarea name="site_description" class="form-control" rows="3">{{ $settings['site_description'] ?? 'Aura Soaps offers crafted natural soaps and eco-friendly skincare.' }}</textarea>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@
 
             <div class="mb-3">
               <label class="form-label fs-7 fw-bold">Homepage Meta Description</label>
-              <textarea name="seo[home][meta_description]" class="form-control" rows="3">{{ $homeSeo->meta_description ?? 'Handcrafted natural soaps, botanical skincare, and cold-processed organic bath products.' }}</textarea>
+              <textarea name="seo[home][meta_description]" class="form-control" rows="3">{{ $homeSeo->meta_description ?? 'Crafted natural soaps, botanical skincare, and cold-processed organic bath products.' }}</textarea>
             </div>
 
             <div class="mb-3">
@@ -164,7 +164,7 @@
             <div class="row g-3">
               <div class="col-md-4">
                 <label class="form-label fs-7 fw-bold">Hero Badge Text</label>
-                <input type="text" name="hero_badge" class="form-control" value="{{ $settings['hero_badge'] ?? '100% Organic & Handcrafted' }}">
+                <input type="text" name="hero_badge" class="form-control" value="{{ $settings['hero_badge'] ?? '100% Organic & Crafted' }}">
               </div>
 
               <div class="col-md-4">
@@ -174,12 +174,12 @@
 
               <div class="col-md-4">
                 <label class="form-label fs-7 fw-bold">Hero Main Image Path</label>
-                <input type="text" name="hero_img" class="form-control" value="{{ $settings['hero_img'] ?? 'assets/images/aura-shop (5).jpeg' }}">
+                <input type="text" name="hero_img" class="form-control" value="{{ $settings['hero_img'] ?? 'assets/images/aurasoap images/aurashop (5).jpeg' }}">
               </div>
 
               <div class="col-12">
                 <label class="form-label fs-7 fw-bold">Hero Description</label>
-                <textarea name="hero_desc" class="form-control" rows="2">{{ $settings['hero_desc'] ?? 'Natural handcrafted soaps made with skin-loving ingredients that cleanse, nourish, and refresh every day. Experience luxury organic bathing rituals.' }}</textarea>
+                <textarea name="hero_desc" class="form-control" rows="2">{{ $settings['hero_desc'] ?? 'Natural crafted soaps made with skin-loving ingredients that cleanse, nourish, and refresh every day. Experience luxury organic bathing rituals.' }}</textarea>
               </div>
 
               <div class="col-12 border-top pt-3">

@@ -146,7 +146,7 @@ class CmsContentSeeder extends Seeder
         // 4. Process Steps
         ProcessStep::firstOrCreate(['step_number' => 1], ['title' => 'Ethical Sourcing', 'description' => 'We source certified organic botanical oils and fair-trade plant butter directly from sustainable farms.', 'sort_order' => 1]);
         ProcessStep::firstOrCreate(['step_number' => 2], ['title' => 'Cold-Process Blending', 'description' => 'Ingredients are blended at low temperatures to preserve therapeutic vitamins, enzymes, and antioxidants.', 'sort_order' => 2]);
-        ProcessStep::firstOrCreate(['step_number' => 3], ['title' => '6-Week Curing', 'description' => 'Every artisanal batch is hand-cut and naturally cured for 6 full weeks to create a long-lasting, ultra-mild soap.', 'sort_order' => 3]);
+        ProcessStep::firstOrCreate(['step_number' => 3], ['title' => '6-Week Curing', 'description' => 'Every artisanal batch is crafted and naturally cured for 6 full weeks to create a long-lasting, ultra-mild soap.', 'sort_order' => 3]);
         ProcessStep::firstOrCreate(['step_number' => 4], ['title' => 'Eco Packaging', 'description' => 'Inspected, quality-checked, and wrapped in 100% plastic-free compostable materials.', 'sort_order' => 4]);
 
         // 5. Testimonials
@@ -188,7 +188,7 @@ class CmsContentSeeder extends Seeder
         ]);
 
         // 7. FAQs
-        Faq::firstOrCreate(['question' => 'Are Aura Soaps 100% natural and cruelty-free?'], ['category' => 'Ingredients', 'answer' => 'Yes! All Aura Soaps are handcrafted with 100% organic plant oils, essential oils, and botanicals. We never test on animals or use synthetic sulfates or parabens.', 'sort_order' => 1]);
+        Faq::firstOrCreate(['question' => 'Are Aura Soaps 100% natural and cruelty-free?'], ['category' => 'Ingredients', 'answer' => 'Yes! All Aura Soaps are crafted with 100% organic plant oils, essential oils, and botanicals. We never test on animals or use synthetic sulfates or parabens.', 'sort_order' => 1]);
         Faq::firstOrCreate(['question' => 'How long does one Aura soap bar last?'], ['category' => 'Usage', 'answer' => 'Our bars last 3 to 4 weeks with daily use when kept on a draining soap dish to stay dry between uses.', 'sort_order' => 2]);
 
         // 8. Page-wise SEO Metas
@@ -196,7 +196,7 @@ class CmsContentSeeder extends Seeder
             [
                 'page_route' => 'home',
                 'title' => 'Aura Soaps | Natural Care • Pure Touch',
-                'meta_description' => 'Handcrafted natural soaps, botanical skincare, and cold-processed organic bath products enriched with raw plant oils.',
+                'meta_description' => 'Crafted natural soaps, botanical skincare, and cold-processed organic bath products enriched with raw plant oils.',
                 'focus_keyword' => 'natural soaps',
                 'robots' => 'index, follow',
             ],
@@ -210,7 +210,7 @@ class CmsContentSeeder extends Seeder
             [
                 'page_route' => 'products',
                 'title' => 'Products Catalog | Organic Bar Soaps & Body Scrubs',
-                'meta_description' => 'Explore our complete range of handcrafted cold-processed soap bars, body scrubs, and facial cleansing bars.',
+                'meta_description' => 'Explore our complete range of crafted cold-processed soap bars, body scrubs, and facial cleansing bars.',
                 'focus_keyword' => 'organic bar soaps',
                 'robots' => 'index, follow',
             ],

@@ -19,7 +19,7 @@
         </div>
         <div class="mb-3">
           <label class="form-label fs-7 fw-semibold">Meta Description</label>
-          <textarea name="meta_description" class="form-control form-control-sm" rows="3" placeholder="Handcrafted organic soaps..."></textarea>
+          <textarea name="meta_description" class="form-control form-control-sm" rows="3" placeholder="Crafted organic soaps..."></textarea>
         </div>
         <div class="mb-3">
           <label class="form-label fs-7 fw-semibold">Focus Keyword</label>

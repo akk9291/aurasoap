@@ -353,7 +353,7 @@ const productData = {
 
 const blogData = {
   1: {
-    title: 'The Art of Handcrafted Soap: Why Cold Process Matters',
+    title: 'The Art of Crafted Soap: Why Cold Process Matters',
     category: 'Skincare Guide',
     date: 'August 02, 2026',
     desc: 'Cold process soap making preserves the natural glycerin and vital botanical nutrients often destroyed in high-heat commercial manufacturing. Discover how slow-cure soap crafting transforms everyday bathing into a nourishing ritual.'

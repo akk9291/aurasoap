@@ -198,7 +198,7 @@
         <i class="fas fa-sparkles"></i> Artisan Formulations
       </span>
       <h2 class="section-title">Our Featured Soap Collection</h2>
-      <p class="text-muted-custom">Hand-cut artisanal bars enriched with essential plant oils, vitamins, and minerals.</p>
+      <p class="text-muted-custom">Artisanal crafted bars enriched with essential plant oils, vitamins, and minerals.</p>
     </div>
 
     <!-- Product Cards Grid -->

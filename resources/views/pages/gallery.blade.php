@@ -16,7 +16,7 @@
         <img src="{{ asset('assets/images/aurasoap images/aurashop (18).jpeg') }}" alt="Aura Shea Butter & Sandalwood Soap" class="img-fluid rounded-xl shadow border border-amber">
       </div>
       <div class="col-md-4 col-6">
-        <img src="{{ asset('assets/images/aurasoap images/aurashop (20).jpeg') }}" alt="Aura Handcrafted Artisan Soaps" class="img-fluid rounded-xl shadow border border-amber">
+        <img src="{{ asset('assets/images/aurasoap images/aurashop (20).jpeg') }}" alt="Aura Crafted Artisan Soaps" class="img-fluid rounded-xl shadow border border-amber">
       </div>
       <div class="col-md-4 col-6">
         <img src="{{ asset('assets/images/aurasoap images/aurashop (15).jpeg') }}" alt="Aura Turmeric Botanical Soap" class="img-fluid rounded-xl shadow border border-amber">
